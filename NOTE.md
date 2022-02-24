@@ -21,3 +21,9 @@
 
 - USB-C
     - To use USB2.0 with USB-C, the CC1 and CC2 pins need pull down 5.1K.
+
+
+## PCB
+
+- JLCPCB
+    - RP2040: https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=RP2040

@@ -10,6 +10,9 @@
 
 - Programmable firmware (CircuitPython)
     - https://circuitpython.org/
+    - Pimoroni PGA2040
+        - https://shop.pimoroni.com/products/pga2040?variant=39359629656147
+        - https://circuitpython.org/board/pimoroni_pga2040/
     - Adafruit QT Py RP2040
         - https://www.adafruit.com/product/4900
         - https://circuitpython.org/board/qtpy_m0/

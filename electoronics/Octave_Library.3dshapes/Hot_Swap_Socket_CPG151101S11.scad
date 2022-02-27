@@ -34,7 +34,7 @@ color("beige") translate([0,0,0.05]) {
     }
 }
 
-color("silver") linear_extrude(1.5) {
+color("silver") linear_extrude(1.85) {
     //pad_min_margin = 11.30;
     pad_min_margin = 10.90;
     pad_len = (14.50 - pad_min_margin)/2;

@@ -332,7 +332,9 @@
     "pinned_footprint_libs": [
       "Octave_Library"
     ],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "Octave_Library"
+    ]
   },
   "meta": {
     "filename": "Untitled.kicad_pro",

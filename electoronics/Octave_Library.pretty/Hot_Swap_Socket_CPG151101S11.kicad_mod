@@ -1,6 +1,6 @@
 (footprint "Hot_Swap_Socket_CPG151101S11" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 621B8234)
+  (tedit 621CD2EB)
   (descr "MX compatible switch with hot swap socket")
   (attr smd)
   (fp_text reference "REF**" (at 0 -8.747 unlocked) (layer "F.SilkS")
@@ -95,8 +95,8 @@
   (fp_rect (start -7.565 -6.53) (end -4.615 -3.63) (layer "F.Fab") (width 0.12) (fill none) (tstamp e6ba8e5a-5295-4d99-9539-f0f44fc4499c))
   (fp_circle (center 5.08 0) (end 6.1565 0) (layer "F.Fab") (width 0.12) (fill none) (tstamp 1c43bb8e-759f-4135-b23d-5307782a8854))
   (fp_circle (center 0 0) (end 2.755 0) (layer "F.Fab") (width 0.12) (fill none) (tstamp 4711680f-0033-4792-90b3-99dc2aa8a7cf))
-  (pad "1" smd rect (at 7.36 -2.54) (size 2.55 2.5) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 18ee575f-d41e-4a26-ac0a-b229112d8877))
-  (pad "2" smd rect (at -6.09 -5.08) (size 2.55 2.5) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4fe15866-5386-4410-a27b-4fc15182a4f3))
+  (pad "1" smd rect (at -6.09 -5.08) (size 2.55 2.5) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4fe15866-5386-4410-a27b-4fc15182a4f3))
+  (pad "2" smd rect (at 7.36 -2.54) (size 2.55 2.5) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 18ee575f-d41e-4a26-ac0a-b229112d8877))
   (model "../Octave_Library.3dshapes/Hot_Swap_Socket_CPG151101S11.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))

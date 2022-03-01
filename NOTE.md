@@ -27,3 +27,4 @@
 
 - JLCPCB
     - RP2040: https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=RP2040
+    - ATMEGA32U4-MU: https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=ATMEGA32U4-MU

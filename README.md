@@ -44,7 +44,7 @@ In particular, the MO key is placed so that it can be pressed with the thumb.
 
 ## Schematic
 
-📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.1)
+📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.2)
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 
 Since USB VIDs and PIDs are not readily available to individuals, I decided to use the Adafruit QT Py RP2040 as is, which provides CircuitPython with built-in VID and PID.

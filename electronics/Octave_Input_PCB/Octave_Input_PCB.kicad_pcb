@@ -323,7 +323,7 @@
     (pad "12" thru_hole circle (at 7.62 2.54 180) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
       (net 25 "+3V3") (pinfunction "3.3V") (pintype "power_out") (tstamp 51f3d9d7-479c-459d-8df1-2e59f12da1f0))
     (pad "13" thru_hole circle (at 7.62 5.08 180) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
-      (net 26 "C") (pinfunction "GND") (pintype "passive") (tstamp fe7a54f0-16c5-4831-a0a4-9812c5c0c12d))
+      (net 26 "C") (pinfunction "GND") (pintype "power_out") (tstamp fe7a54f0-16c5-4831-a0a4-9812c5c0c12d))
     (pad "14" thru_hole circle (at 7.62 7.62 180) (size 1.524 1.524) (drill 0.762) (layers *.Cu *.Mask)
       (net 22 "unconnected-(U1-Pad14)") (pinfunction "5V") (pintype "power_out") (tstamp 12b20531-f70d-425e-aa6b-9f8c1dc05208))
   )

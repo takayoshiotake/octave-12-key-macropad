@@ -1,6 +1,6 @@
 (footprint "Incremental_Encoder_PEC12R-4xxxF-Sxxxx" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
-  (tedit 62231DCB)
+  (tedit 6228AEF7)
   (attr through_hole)
   (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "F.SilkS")
     (effects (font (size 1 1) (thickness 0.15)))
@@ -36,4 +36,9 @@
   (pad "5" thru_hole circle (at 2.5 7.5) (size 1.8 1.8) (drill 1.2) (layers *.Cu *.Mask) (tstamp 821ac304-8331-43df-80d7-fa226f9fd3fa))
   (pad "MH1" thru_hole circle (at 5.6 0) (size 3.5 3.5) (drill 2.3) (layers *.Cu *.Mask) (tstamp 6159b863-c21a-4b80-bf78-cce7a982bf19))
   (pad "MH2" thru_hole circle (at -5.6 0) (size 3.5 3.5) (drill 2.3) (layers *.Cu *.Mask) (tstamp dc923336-7350-445b-900b-2c0837b632bd))
+  (model "../Octave_Library.3dshapes/Bourns_PEC12R-4x20F-Sxxxx.step"
+    (offset (xyz 0 0 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )

@@ -2871,7 +2871,10 @@
   (gr_circle (center 42.505 66.675) (end 45.005 66.675) (layer "B.Fab") (width 0.1) (fill none) (tstamp be743614-4bf7-447e-8514-33e2927391e4))
   (gr_circle (center 128.905 66.675) (end 131.405 66.675) (layer "B.Fab") (width 0.1) (fill none) (tstamp cbead53d-9e82-4ce4-a891-af9fb9efb1bb))
   (gr_rect (start 38.1 38.1) (end 133.35 133.35) (layer "F.Fab") (width 0.12) (fill none) (tstamp 41f436e7-03a8-4549-9f37-c52e09f9d2c3))
-  (gr_text "Octave Input PCB rev.2" (at 85.725 126.365) (layer "F.SilkS") (tstamp 4e5ed944-23f8-43e7-a788-e380ad785310)
+  (gr_text "JLCJLCJLCJLC" (at 123.825 126.365) (layer "F.SilkS") (tstamp 14deba1b-127a-4b5f-8638-f0d9bdceaa2c)
+    (effects (font (size 1 1) (thickness 0.15)) (justify right))
+  )
+  (gr_text "Octave Input PCB rev.2.1" (at 85.725 126.365) (layer "F.SilkS") (tstamp 4e5ed944-23f8-43e7-a788-e380ad785310)
     (effects (font (size 1 1) (thickness 0.15)))
   )
 

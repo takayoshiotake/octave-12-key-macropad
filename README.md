@@ -54,6 +54,16 @@ Also, most importantly, I have never designed an MCU circuit before, so to avoid
 - MCU: Adafruit QT Py RP2040
     - 🔗 https://learn.adafruit.com/adafruit-qt-py-2040
 
+📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch)
+
+
 ## PCB
+
+![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
+
+📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
+
+
+## BOM
 
 Next time.

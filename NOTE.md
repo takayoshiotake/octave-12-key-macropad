@@ -22,6 +22,9 @@
     - https://shop.pimoroni.com/products/pga2040?variant=39359629656147
     - https://circuitpython.org/board/pimoroni_pga2040/
 
+- Seeed XIAO RP2040
+    - https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html
+
 - RP2040
     - https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf
 

@@ -5,6 +5,8 @@
         - http://www.kailh.com/en/Products/Ks/HPC/
 
 - Incremental encoder with push momentary switch
+    - Bourns PEC11R-4xxxF-Sxxxx
+        - https://www.bourns.com/products/encoders/contacting-encoders/product/PEC11R
     - Bourns PEC12R-4xxxF-Sxxxx
         - https://www.bourns.com/products/encoders/contacting-encoders/product/PEC12R
 

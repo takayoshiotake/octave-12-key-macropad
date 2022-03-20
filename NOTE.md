@@ -5,6 +5,8 @@
         - http://www.kailh.com/en/Products/Ks/HPC/
 
 - Incremental encoder with push momentary switch
+    - Bourns PEC11R-4xxxF-Sxxxx
+        - https://www.bourns.com/products/encoders/contacting-encoders/product/PEC11R
     - Bourns PEC12R-4xxxF-Sxxxx
         - https://www.bourns.com/products/encoders/contacting-encoders/product/PEC12R
 
@@ -19,6 +21,9 @@
 - Pimoroni PGA2040
     - https://shop.pimoroni.com/products/pga2040?variant=39359629656147
     - https://circuitpython.org/board/pimoroni_pga2040/
+
+- Seeed XIAO RP2040
+    - https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html
 
 - RP2040
     - https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf

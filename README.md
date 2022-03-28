@@ -66,4 +66,4 @@ Also, most importantly, I have never designed an MCU circuit before, so to avoid
 
 ## BOM
 
-Next time.
+[[WIP] Prototype](prototype/README.md)

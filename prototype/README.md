@@ -18,5 +18,5 @@
 | GLO-ACC-P75-RK-G | 1 | (SW13) | Glorious rotary knob for GMMK Pro (Gold) |
 
 - Octave Input PCB rev.2.1
-    <img src="IMG_4543.jpg" width="160"/> <img src="IMG_4544.jpg" width="160"/>
 
+    <img src="IMG_4543.jpg" width="160"/> <img src="IMG_4544.jpg" width="160"/>

@@ -27,3 +27,8 @@
 
 - Software
   - 📄 [software_first/README.md](software_first/README.md)
+
+### Issues
+
+- [ ] Some pin names in U1 of schematic rev.2 are incorrect
+    D8-11 --> D7-10

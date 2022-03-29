@@ -25,7 +25,5 @@
 
     <img src="IMG_4545.jpg" width="160"/>
 
-- XIAO RP2040
-    - CircuitPython 7.2.3:
-        - 🔗 [https://circuitpython.org/board/seeeduino_xiao_rp2040/](https://circuitpython.org/board/seeeduino_xiao_rp2040/)
-        - 🔗 [https://github.com/adafruit/circuitpython/releases/tag/7.2.3](https://github.com/adafruit/circuitpython/releases/tag/7.2.3)
+- Software
+  - 📄 [software_first/README.md](software_first/README.md)

@@ -21,6 +21,10 @@
 
     <img src="IMG_4543.jpg" width="160"/> <img src="IMG_4544.jpg" width="160"/>
 
+- Octave Input PCB rev.2.1 (Assembled)
+
+    <img src="IMG_4546.jpg" width="160"/> <img src="IMG_4547.jpg" width="160"/>
+
 - 1x7-pin header (adjusted length)
 
     <img src="IMG_4545.jpg" width="160"/>
@@ -30,5 +34,8 @@
 
 ### Issues
 
-- [ ] Some pin names in U1 of schematic rev.2 are incorrect
-    D8-11 --> D7-10
+- [ ] Some pin names in U1 of schematic rev.2 are incorrect (D8-11 --> D7-10)
+- [ ] Pay attention to the mounting surface of SW13
+- [ ] In PCB rev.2.1, col0 will not work if the through hole of pin1 of SW13 fails.
+- [ ] The XIAO RP2040's POWER LED (RED) cannot be turned off because it cannot be controlled.
+- [ ] The push switch of PEC12R-4217F-S0024-ND is clicky and heavy and loud.

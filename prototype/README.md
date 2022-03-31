@@ -39,3 +39,4 @@
 - [ ] In PCB rev.2.1, col0 will not work if the through hole of pin1 of SW13 fails.
 - [ ] The XIAO RP2040's POWER LED (RED) cannot be turned off because it cannot be controlled.
 - [ ] The push switch of PEC12R-4217F-S0024-ND is clicky and heavy and loud.
+- [ ] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R1-R4 in the schematic rev.2.

@@ -33,6 +33,13 @@ for col_io in col_ios:
     col_io.direction = digitalio.Direction.INPUT
     col_io.pull = digitalio.Pull.UP
 
+knob_a = digitalio.DigitalInOut(board.D8)
+knob_a.direction = digitalio.Direction.INPUT
+knob_a.pull = digitalio.Pull.UP
+knob_b = digitalio.DigitalInOut(board.D10)
+knob_b.direction = digitalio.Direction.INPUT
+knob_b.pull = digitalio.Pull.UP
+
 
 def select_row(row):
     # Once deselect all rows
@@ -44,6 +51,7 @@ def select_row(row):
 
 keys_state = [{'is_pressed': False}
               for _ in range(len(row_ios) * len(col_ios))]
+knob_signals = [knob_a.value, knob_b.value]
 while True:
     are_keys_pressed = []
     for row in range(len(row_ios)):
@@ -57,4 +65,9 @@ while True:
             key_state['is_pressed'] = are_keys_pressed[i]
             print(
                 f"""{"pressed " if key_state['is_pressed'] else "released"}: {i}""")
+
+    if knob_a.value != knob_signals[0] and not knob_a.value:
+        print(f"""rotated : {"CW" if knob_signals[1] else "CCW"}""")
+    knob_signals = [knob_a.value, knob_b.value]
+
     time.sleep(0.01)

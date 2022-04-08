@@ -26,9 +26,11 @@ Board: Seeed XIAO RP-2040
 ```
 
 
-## upload
+## Upload
 
 ```shell-session
 % cp boot.py code.py /Volumes/OCTAVE_CP/
 % cp -r octave_pcb /Volumes/OCTAVE_CP/
 ```
+
+MEMO: After uploading boot.py, you need to hold down SW14 to boot to enable the USB drive.

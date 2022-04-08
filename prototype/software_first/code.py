@@ -6,6 +6,7 @@ import usb_hid
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 from adafruit_hid.keycode import Keycode
+from adafruit_hid.mouse import Mouse
 from neopixel import NeoPixel
 
 from octave_pcb.key_matrix import KeyMatrix
@@ -28,6 +29,7 @@ while True:
   try:
     keyboard = Keyboard(usb_hid.devices)
     keyboard_layout = KeyboardLayoutUS(keyboard)
+    mouse = Mouse(usb_hid.devices)
     pixels[0] = (0, 1, 1)
 
     keys_state = [{'is_pressed': False}
@@ -49,6 +51,10 @@ while True:
       direction = rotary_encoder.detect_direction()
       if direction != 0:
         print(f"""rotated : {"CW" if direction > 0 else "CCW"}""")
+        if direction > 0:
+          mouse.move(wheel=1)
+        else:
+          mouse.move(wheel=-1)
   except Exception:
     pixels[0] = (0, 0, 1)
     time.sleep(3)

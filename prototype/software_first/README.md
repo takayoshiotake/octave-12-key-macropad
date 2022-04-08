@@ -30,4 +30,5 @@ Board: Seeed XIAO RP-2040
 
 ```shell-session
 % cp boot.py code.py /Volumes/OCTAVE_CP/
+% cp -r octave_pcb /Volumes/OCTAVE_CP/
 ```

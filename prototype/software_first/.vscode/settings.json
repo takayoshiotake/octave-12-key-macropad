@@ -8,7 +8,10 @@
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
   "python.formatting.provider": "autopep8",
-  "python.sortImports.path": ".venv/bin/isort",
+  "python.formatting.autopep8Args": [
+    "--indent-size=2",
+  ],
+  "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
   "python.languageServer": "Pylance",
   "python.linting.pylintEnabled": false,
   "python.analysis.diagnosticSeverityOverrides": {
@@ -17,7 +20,7 @@
   "python.analysis.extraPaths": [
     "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.16/boards/0x2886/0x0042",
     "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.16/stubs",
-    "/Users/takayoshi/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20220330/adafruit-circuitpython-bundle-py-20220330/lib"
+    "/Users/takayoshi/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20220408/adafruit-circuitpython-bundle-py-20220408/lib"
   ],
   "circuitpython.board.version": null,
   "circuitpython.board.vid": "0x2886",

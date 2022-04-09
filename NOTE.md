@@ -31,6 +31,10 @@
 - USB-C
   - To use USB2.0 with USB-C, the CC1 and CC2 pins need pull down 5.1K.
 
+- General-purpose case
+  - WSC10-14-5W
+    - <https://www.takachi-el.co.jp/products/WSC>
+
 ## PCB
 
 - JLCPCB

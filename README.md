@@ -3,7 +3,6 @@
 The Octave is a 12-key macropad.
 It is primarily designed to be a compact keyboard with support for 12 function keys (F1 - F12).
 
-
 ## Specifications
 
 - USB-C (USB2.0, HID)
@@ -13,7 +12,6 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 - No LEDs
 - No keycaps
 - No switches
-
 
 ## Layout
 
@@ -32,6 +30,7 @@ In particular, the MO key is placed so that it can be pressed with the thumb.
 **RAW data for Keyboard Layout Editor v0.15:**
 
 📄 [layout/keyboard-layout.rawdata.json](layout/keyboard-layout.rawdata.json)
+
 ```js
 ["F1","F2","F3","F4"],
 ["F5","F6","F7","F8"],
@@ -40,7 +39,6 @@ In particular, the MO key is placed so that it can be pressed with the thumb.
 ```
 
 - 🔗 [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)
-
 
 ## Schematic
 
@@ -52,17 +50,15 @@ Since USB VIDs and PIDs are not readily available to individuals, I decided to u
 Also, most importantly, I have never designed an MCU circuit before, so to avoid risk, I will forgo a custom MCU PCB for this project.
 
 - MCU: Adafruit QT Py RP2040
-    - 🔗 https://learn.adafruit.com/adafruit-qt-py-2040
+  - 🔗 <https://learn.adafruit.com/adafruit-qt-py-2040>
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch)
-
 
 ## PCB
 
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
-
 
 ## BOM
 

@@ -43,24 +43,52 @@ class KeyEventPlanner:
     return key_event
 
 
-KeyAssignment = collections.namedtuple('KeyAssignment', ['code'])
+class CodeType:
+  KEYBOARD = 0
+  MOUSE_MOVE = 1
+  LAYER_MOMENTRY = 2
 
-KEY_MAP = [
-    KeyAssignment(Keycode.F1),
-    KeyAssignment(Keycode.F2),
-    KeyAssignment(Keycode.F3),
-    KeyAssignment(Keycode.F4),
-    KeyAssignment(Keycode.F5),
-    KeyAssignment(Keycode.F6),
-    KeyAssignment(Keycode.F7),
-    KeyAssignment(Keycode.F8),
-    KeyAssignment(Keycode.F9),
-    KeyAssignment(Keycode.F10),
-    KeyAssignment(Keycode.F11),
-    KeyAssignment(Keycode.F12),
-    None,
-    None,
-    KeyAssignment(Keycode.SPACEBAR),
+
+KeyAssignment = collections.namedtuple('KeyAssignment', ['type', 'code'])
+
+KEYCODE_MO = 'MO'
+KEY_MAP_LAYERS = [
+    [
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F1),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F2),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F3),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F4),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F5),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F6),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F7),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F8),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F9),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F10),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F11),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.F12),
+        None,
+        None,
+        None,
+        KeyAssignment(CodeType.LAYER_MOMENTRY, None),
+    ],
+    [
+        KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.UP_ARROW),
+        None,
+        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 0, 'y': -1, 'wheel': 0}),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.LEFT_ARROW),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.DOWN_ARROW),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.RIGHT_ARROW),
+        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 0, 'y': 1, 'wheel': 0}),
+        KeyAssignment(CodeType.MOUSE_MOVE, {'x': -1, 'y': 0, 'wheel': 0}),
+        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 1, 'y': 0, 'wheel': 0}),
+        None,
+        None,
+        None,
+        None,
+        None,
+        None
+    ],
 ]
 
 print("Hello, Octave!")
@@ -83,6 +111,7 @@ while True:
     mouse = Mouse(usb_hid.devices)
     pixels[0] = (0, 1, 1)
 
+    key_map_layer = 0
     key_event_planners = [KeyEventPlanner()
                           for _ in range(len(key_matrix.row_ios) * len(key_matrix.col_ios))]
     pressed_keys = [None for _ in range(len(key_event_planners))]
@@ -94,18 +123,41 @@ while True:
         for i, key_event_planner in enumerate(key_event_planners):
           key_event = key_event_planner.make_event(
               current_time, are_keys_pressed[i])
-          # print(f"""pressed : {i}""")
           if key_event == KeyEvent.PRESS:
             print(f"""pressed : {i}""")
-            keycode = KEY_MAP[i].code
-            pressed_keys[i] = keycode
-            keyboard.press(pressed_keys[i])
+            pressed_keys[i] = KEY_MAP_LAYERS[key_map_layer][i]
+            key_assignment = pressed_keys[i]
+            if key_assignment is None:
+              pass
+            elif key_assignment.type == CodeType.LAYER_MOMENTRY:
+              key_map_layer = 1
+            elif key_assignment.type == CodeType.KEYBOARD:
+              keyboard.press(key_assignment.code)
+            elif key_assignment.type == CodeType.MOUSE_MOVE:
+              mouse.move(**key_assignment.code)
           elif key_event == KeyEvent.LONG_PRESS:
-            print(f"""pressed : {i}""")
-            keyboard.press(pressed_keys[i])
+            # print(f"""pressed : {i}""")
+            key_assignment = pressed_keys[i]
+            if key_assignment is None:
+              pass
+            elif key_assignment.type == CodeType.LAYER_MOMENTRY:
+              pass
+            elif key_assignment.type == CodeType.KEYBOARD:
+              print(f"""pressed : {i}""")
+              keyboard.press(key_assignment.code)
+            elif key_assignment.type == CodeType.MOUSE_MOVE:
+              print(f"""pressed : {i}""")
+              mouse.move(**key_assignment.code)
           elif key_event == KeyEvent.RELEASE:
             print(f"""released: {i}""")
-            keyboard.release(pressed_keys[i])
+            key_assignment = pressed_keys[i]
+            pressed_keys[i] = None
+            if key_assignment is None:
+              pass
+            elif key_assignment.type == CodeType.LAYER_MOMENTRY:
+              key_map_layer = 0
+            elif key_assignment.type == CodeType.KEYBOARD:
+              keyboard.release(key_assignment.code)
 
         scan_key_matrix_timing += 0.01
         if scan_key_matrix_timing <= current_time:

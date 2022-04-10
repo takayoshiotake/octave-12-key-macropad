@@ -4,8 +4,10 @@
 
 ### BOM
 
+**PCB:**
+
 | Material | Unit | Designator | Note |
-|-|-:| -|-|
+|-|-:|-|-|
 | Octave Input PCB rev.2.1 | 1 | n/a | JLCPCB |
 | 0.01uF 0805(2012 Metric) | 2 | C1,C2 | PCBA |
 | 1N4148WS | 14 | D1-14 | PCBA |
@@ -16,6 +18,13 @@
 | PEC12R-4217F-S0024-ND | 1 | SW13 | Bourns incremental encoder |
 | Boba U4 (68g) | 13 | (SW1-12, SW14) | Gazzew silent tactile keyboard switch |
 | GLO-ACC-P75-RK-G | 1 | (SW13) | Glorious rotary knob for GMMK Pro (Gold) |
+
+**Enclosure:**
+
+| Material | Unit | Note |
+|-|-:|-|
+| WSC10-14-5W | 1 | TAKACHI Sloped plastic enclosure |
+| M2.3 x6mm self-tapping screw  | 4 |  |
 
 - Octave Input PCB rev.2.1
 
@@ -29,6 +38,10 @@
 
     <img src="IMG_4545.jpg" width="160"/>
 
+- Enclosure
+
+    <img src="IMG_4557.jpg" width="160"/> <img src="IMG_4558.jpg" width="160"/> <img src="IMG_4559.jpg" width="160"/>
+
 - Software
   - 📄 [software_first/README.md](software_first/README.md)
 
@@ -41,3 +54,4 @@
 - [ ] The push switch of PEC12R-4217F-S0024-ND is clicky and heavy and loud.
 - [ ] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R1-R4 in the schematic rev.2.
     ↪︎ It can be solved by removing R1 and R3 and using pull-up of RP2040 instead, or use a large value such as 100K for R1 and R3.
+- [ ] A specially designed enclosure is required.

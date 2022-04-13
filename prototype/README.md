@@ -47,11 +47,13 @@
 
 ### Issues
 
-- [ ] Some pin names in U1 of schematic rev.2 are incorrect (D8-11 --> D7-10)
+- [x] Some pin names in U1 of schematic rev.2 are incorrect (D8-11 --> D7-10)
+    ↪︎ Fixed in rev.3
 - [ ] Pay attention to the mounting surface of SW13
 - [ ] In PCB rev.2.1, col0 will not work if the through hole of pin1 of SW13 fails.
 - [ ] The XIAO RP2040's POWER LED (RED) cannot be turned off because it cannot be controlled.
 - [ ] The push switch of PEC12R-4217F-S0024-ND is clicky and heavy and loud.
-- [ ] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R1-R4 in the schematic rev.2.
+- [x] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R1-R4 in the schematic rev.2.
     ↪︎ It can be solved by removing R1 and R3 and using pull-up of RP2040 instead, or use a large value such as 100K for R1 and R3.
+    ↪︎ Fixed in rev.3
 - [ ] A specially designed enclosure is required.

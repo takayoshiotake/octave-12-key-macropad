@@ -49,11 +49,27 @@
 
 - [x] Some pin names in U1 of schematic rev.2 are incorrect (D8-11 --> D7-10)
     ↪︎ Fixed in rev.3
-- [ ] Pay attention to the mounting surface of SW13
-- [ ] In PCB rev.2.1, col0 will not work if the through hole of pin1 of SW13 fails.
-- [ ] The XIAO RP2040's POWER LED (RED) cannot be turned off because it cannot be controlled.
-- [ ] The push switch of PEC12R-4217F-S0024-ND is clicky and heavy and loud.
+- [x] Pay attention to the mounting surface of SW13
+    ↪︎ I'll be very careful next time...
+- [x] The XIAO RP2040's POWER LED (RED) cannot be turned off because it cannot be controlled.
+    ↪︎ no problem
 - [x] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R1-R4 in the schematic rev.2.
     ↪︎ It can be solved by removing R1 and R3 and using pull-up of RP2040 instead, or use a large value such as 100K for R1 and R3.
     ↪︎ Fixed in rev.3
-- [ ] A specially designed enclosure is required.
+
+The following issues are carried over to the next prototype.
+
+- In PCB rev.2.1, col0 will not work if the through hole of pin1 of SW13 fails.
+    ↪︎ Improve routing
+- The push switch of PEC12R-4217F-S0024-ND is clicky and heavy and loud.
+- A specially designed enclosure is required.
+    ↪︎ U1 takes up a lot of space.
+    ↪︎ The only way seems to be to design a dedicated MCU circuit.
+
+### Results
+
+The combination of PEC12R-4217F-S0024-ND and GLO-ACC-P75-RK-G fits perfectly.
+However, although the PEC12R-4217F-S0024-ND is great as a rotary encoder, it has a heavy click feeling and a loud sound, so I would like to find an alternative.
+
+I think the most important issue is that the USB cable must be connected inside the enclosure.
+It seems necessary to design the MCU circuit in the next prototype.

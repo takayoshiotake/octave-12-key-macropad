@@ -3,6 +3,11 @@
 The Octave is a 12-key macropad.
 It is primarily designed to be a compact keyboard with support for 12 function keys (F1 - F12).
 
+## Status
+
+- [ ] Second prototype: Custom MCU board
+- [x] First prototype
+
 ## Specifications
 
 - USB-C (USB2.0, HID)
@@ -56,10 +61,11 @@ Also, most importantly, I have never designed an MCU circuit before, so to avoid
 
 ## PCB
 
+📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.2.1)
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
 
 ## BOM
 
-[[WIP] Prototype](prototype/README.md)
+[[Closed] Prototype - First](prototype/README.md)

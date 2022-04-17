@@ -10,6 +10,10 @@
   - Bourns PEC12R-4xxxF-Sxxxx
     - <https://www.bourns.com/products/encoders/contacting-encoders/product/PEC12R>
 
+- Stick Controller
+  - Alps Alpine RKJXV/RKJX2 Series
+    - <https://tech.alpsalpine.com/prod/e/html/multicontrol/potentiometer/rkjxk/rkjxk_list.html>
+
 - Programmable firmware (CircuitPython)
   - <https://circuitpython.org/>
   - <https://docs.circuitpython.org/en/latest/BUILDING.html>

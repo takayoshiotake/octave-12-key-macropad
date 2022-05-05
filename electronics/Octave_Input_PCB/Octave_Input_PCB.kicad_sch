@@ -1686,7 +1686,7 @@
   (symbol (lib_name "C_1") (lib_id "Device:C") (at 251.46 153.67 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 172c53e1-ff21-4247-8ac3-d08b615ae4b5)
-    (property "Reference" "C1" (id 0) (at 255.27 152.3999 0)
+    (property "Reference" "C11" (id 0) (at 255.27 152.3999 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "0.01u" (id 1) (at 255.27 154.9399 0)
@@ -1740,7 +1740,7 @@
   (symbol (lib_id "Device:C") (at 233.68 153.67 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 21ad77bf-5ff1-4e47-a420-889e2c26128b)
-    (property "Reference" "C2" (id 0) (at 237.49 152.3999 0)
+    (property "Reference" "C12" (id 0) (at 237.49 152.3999 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "0.01u" (id 1) (at 237.49 154.9399 0)
@@ -2537,10 +2537,10 @@
       (reference "#PWR0104") (unit 1) (value "+3.3V") (footprint "")
     )
     (path "/172c53e1-ff21-4247-8ac3-d08b615ae4b5"
-      (reference "C1") (unit 1) (value "0.01u") (footprint "Octave_Library:C_0805_2012Metric")
+      (reference "C11") (unit 1) (value "0.01u") (footprint "Octave_Library:C_0805_2012Metric")
     )
     (path "/21ad77bf-5ff1-4e47-a420-889e2c26128b"
-      (reference "C2") (unit 1) (value "0.01u") (footprint "Octave_Library:C_0805_2012Metric")
+      (reference "C12") (unit 1) (value "0.01u") (footprint "Octave_Library:C_0805_2012Metric")
     )
     (path "/709f02fa-f113-4f34-aada-ad74ed9e0d25"
       (reference "D1") (unit 1) (value "1N4148WS") (footprint "Octave_Library:D_SOD-323")

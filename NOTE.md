@@ -36,6 +36,8 @@
   - To use USB2.0 with USB-C, the CC1 and CC2 pins need pull down 5.1K.
   - Molex 1054500101
     - <https://www.molex.com/molex/products/part-detail/io_connectors/1054500101>
+  - Korean Hroparts Electronics TYPE-C-31-M-12
+    - <http://www.krhro.com/USBjack/20180124/764.html>
 
 - General-purpose case
   - WSC10-14-5W

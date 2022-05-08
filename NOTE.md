@@ -39,6 +39,10 @@
   - Korean Hroparts Electronics TYPE-C-31-M-12
     - <http://www.krhro.com/USBjack/20180124/764.html>
 
+- Power
+  - Diodes AP2112K-3.3
+    - <https://www.diodes.com/part/view/AP2112/>
+
 - General-purpose case
   - WSC10-14-5W
     - <https://www.takachi-el.co.jp/products/WSC>

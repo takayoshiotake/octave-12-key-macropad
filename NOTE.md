@@ -32,6 +32,10 @@
 - RP2040
   - <https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf>
 
+- Serial NOR Flash
+  - Windbond W25Q64JVSSIQ
+    - <https://www.winbond.com/hq/product/code-storage-flash-memory/serial-nor-flash/index.html?__locale=en&partNo=W25Q64JV>
+
 - USB-C
   - To use USB2.0 with USB-C, the CC1 and CC2 pins need pull down 5.1K.
   - Molex 1054500101

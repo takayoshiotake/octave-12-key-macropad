@@ -47,6 +47,10 @@
   - Diodes AP2112K-3.3
     - <https://www.diodes.com/part/view/AP2112/>
 
+- Crystal Resonator
+  - Yangxing Tech YSX321SL 12Mhz (SMD3225-4)
+    - <https://www.yangxing.hk/products-detail/ysx321sl>
+
 - General-purpose case
   - WSC10-14-5W
     - <https://www.takachi-el.co.jp/products/WSC>

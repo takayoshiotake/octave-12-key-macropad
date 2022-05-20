@@ -269,6 +269,128 @@
       )
     )
   )
+  (symbol "Alps_Alpine_SKRP" (pin_numbers hide) (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+    (property "Reference" "SW" (id 0) (at 0 7.62 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "Alps_Alpine_SKRP" (id 1) (at 0 5.08 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_ Series" (id 2) (at 0 -5.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 0 5.08 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (symbol "Alps_Alpine_SKRP_0_0"
+      (polyline
+        (pts
+          (xy 0 1.27)
+          (xy 1.27 -1.27)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0.635 0)
+          (xy 1.016 0)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 1.397 0)
+          (xy 1.778 0)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.032 -0.508)
+          (xy 2.54 -0.508)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.032 0.508)
+          (xy 2.54 0.508)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.159 0)
+          (xy 2.54 0)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.54 0.508)
+          (xy 2.54 -0.508)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+    )
+    (symbol "Alps_Alpine_SKRP_0_1"
+      (polyline
+        (pts
+          (xy -1.27 -2.54)
+          (xy 1.27 -2.54)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0 -1.27)
+          (xy 0 -2.54)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0 2.54)
+          (xy 0 1.27)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 1.27 2.54)
+          (xy -1.27 2.54)
+        )
+        (stroke (width 0) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (pin passive line (at -3.81 2.54 0) (length 2.54)
+        (name "1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin passive line (at 3.81 2.54 180) (length 2.54)
+        (name "2" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin passive line (at -3.81 -2.54 0) (length 2.54)
+        (name "3" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin passive line (at 3.81 -2.54 180) (length 2.54)
+        (name "4" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
   (symbol "Bourns_PEC12R-4xxxF-Sxxx" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
     (property "Reference" "SW" (id 0) (at 0 7.62 0)
       (effects (font (size 1.27 1.27)))

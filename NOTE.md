@@ -15,7 +15,7 @@
     - <https://tech.alpsalpine.com/prod/e/html/multicontrol/potentiometer/rkjxk/rkjxk_list.html>
 
 - Tactile Switch
-  - Alps Alpine SKRP Series - SKRPABE010
+  - Alps Alpine SKRP Series - SKRPANE010, SKRPABE010
     - <https://tech.alpsalpine.com/prod/e/html/tact/surfacemount/skrp/skrp_list.html>
 
 - Programmable firmware (CircuitPython)

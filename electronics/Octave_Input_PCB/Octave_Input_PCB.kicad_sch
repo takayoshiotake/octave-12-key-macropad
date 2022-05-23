@@ -6,7 +6,7 @@
 
   (title_block
     (title "Octave - Input PCB")
-    (date "2022-05-21")
+    (date "2022-05-23")
     (rev "5.a")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
@@ -3376,7 +3376,7 @@
   (symbol (lib_id "power:GND") (at 120.65 53.34 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 52d5fd6e-adb9-4662-8217-2b0ebb6c2141)
-    (property "Reference" "#PWR?" (id 0) (at 120.65 59.69 0)
+    (property "Reference" "#PWR0143" (id 0) (at 120.65 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 120.65 58.42 0)
@@ -4751,7 +4751,7 @@
       (reference "#PWR0142") (unit 1) (value "GND") (footprint "")
     )
     (path "/52d5fd6e-adb9-4662-8217-2b0ebb6c2141"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0143") (unit 1) (value "GND") (footprint "")
     )
     (path "/b4a74826-80b4-490c-898e-4ec787ca4628"
       (reference "C1") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")

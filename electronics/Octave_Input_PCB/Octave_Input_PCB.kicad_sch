@@ -3844,7 +3844,7 @@
     (pin "1" (uuid 93253bff-dd89-4863-b3d6-411010c1e2ac))
   )
 
-  (symbol (lib_id "Octave_Library:Alps_Alpine_RKJXV1224") (at 224.79 101.6 0) (unit 1)
+  (symbol (lib_id "Octave_Library:Alps_Alpine_RKJXV1224") (at 224.79 101.6 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 8daf908d-b609-45e7-aa6c-dcebac771c0b)
     (property "Reference" "SW14" (id 0) (at 224.79 91.44 0))

@@ -55,6 +55,9 @@
   - Yangxing Tech YSX321SL 12Mhz (SMD3225-4)
     - <https://www.yangxing.hk/products-detail/ysx321sl>
 
+- LED
+  - <http://www.world-semi.com/solution/list-4-1.html>
+
 - General-purpose case
   - WSC10-14-5W
     - <https://www.takachi-el.co.jp/products/WSC>

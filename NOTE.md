@@ -56,7 +56,9 @@
     - <https://www.yangxing.hk/products-detail/ysx321sl>
 
 - LED
-  - <http://www.world-semi.com/solution/list-4-1.html>
+  - WS2812C-2020-V1
+    - <http://www.world-semi.com/solution/list-4-1.html>
+    - <https://lcsc.com/product-detail/Light-Emitting-Diodes-LED_Worldsemi-WS2812C-2020-V1_C2976072.html>
 
 - General-purpose case
   - WSC10-14-5W

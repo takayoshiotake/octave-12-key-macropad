@@ -2866,7 +2866,7 @@
     (property "Value" "Alps_Alpine_SKRP" (id 1) (at 36.83 172.0849 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_ Series" (id 2) (at 38.1 171.45 0)
+    (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_Series" (id 2) (at 38.1 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 27.94 171.45 0)
@@ -3399,7 +3399,7 @@
     (property "Value" "Alps_Alpine_SKRP" (id 1) (at 124.46 50.1649 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
-    (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_ Series" (id 2) (at 125.73 49.53 0)
+    (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_Series" (id 2) (at 125.73 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 115.57 49.53 0)
@@ -5081,10 +5081,10 @@
       (reference "SW15") (unit 1) (value "Bourns_PEC12R-4xxxF-Sxxx") (footprint "Octave_Library:Incremental_Encoder_PEC12R-4xxxF-Sxxxx")
     )
     (path "/130f44fe-e527-4bcc-86bb-5f52ac0ca6b7"
-      (reference "SW21") (unit 1) (value "Alps_Alpine_SKRP") (footprint "Octave_Library:Tactile_Switch_SKRP_ Series")
+      (reference "SW21") (unit 1) (value "Alps_Alpine_SKRP") (footprint "Octave_Library:Tactile_Switch_SKRP_Series")
     )
     (path "/4dae5535-a9c3-4172-8f7d-fac9a279b13a"
-      (reference "SW22") (unit 1) (value "Alps_Alpine_SKRP") (footprint "Octave_Library:Tactile_Switch_SKRP_ Series")
+      (reference "SW22") (unit 1) (value "Alps_Alpine_SKRP") (footprint "Octave_Library:Tactile_Switch_SKRP_Series")
     )
     (path "/da6cca14-5ee3-4c97-bb6d-c82322b5e230"
       (reference "U1") (unit 1) (value "AP2112K-3.3") (footprint "Package_TO_SOT_SMD:SOT-23-5")

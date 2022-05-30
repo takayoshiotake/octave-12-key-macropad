@@ -54,6 +54,8 @@
 - Crystal Resonator
   - Yangxing Tech YSX321SL 12Mhz (SMD3225-4)
     - <https://www.yangxing.hk/products-detail/ysx321sl>
+  - `CL = (C1 * C2) / (C1 + C2) + C(~5pF) => C1 = C2 = (CL - 5pF) * 2`
+    - `CL = 20pF => C = 30pF`
 
 - LED
   - WS2812C-2020-V1

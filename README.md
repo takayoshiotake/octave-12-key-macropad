@@ -49,12 +49,9 @@ In particular, the incremental encoder and stick controller are placed in easy-t
 
 - 🔗 [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)
 
----
-!!!: The following is old information for reference.
-
 ## Schematic
 
-📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.5.0.1)
+📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.5.0.2)
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 
 Since USB VIDs and PIDs are not readily available to individuals, I decided to use the Adafruit QT Py RP2040 as is, which provides CircuitPython with built-in VID and PID.
@@ -68,7 +65,7 @@ Also, most importantly, I have never designed an MCU circuit before, so to avoid
 
 ## PCB
 
-📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.5.0.1)
+📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.5.0.2)
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)

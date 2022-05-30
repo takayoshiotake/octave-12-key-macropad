@@ -8,7 +8,7 @@
   (title_block
     (title "Octave - Input PCB")
     (date "2022-05-30")
-    (rev "5.0.1")
+    (rev "5.0.2")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
 
@@ -518,7 +518,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 6172ac07-ce10-48ce-844d-f32481ec81e5)
     )
-    (fp_text value "1uF" (at 0 1.16) (layer "F.Fab") hide
+    (fp_text value "10uF" (at 0 1.16) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp bed99da7-cec4-4895-963c-f625741be1b7)
     )
@@ -2779,7 +2779,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 3bb28711-4083-4ff4-9b79-732d4a0bc29b)
     )
-    (fp_text value "1uF" (at 0 1.16) (layer "F.Fab") hide
+    (fp_text value "10uF" (at 0 1.16) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp c486605d-7e47-47c1-8074-e7faf5d0c0c5)
     )
@@ -4143,7 +4143,7 @@
   (gr_text "JLCJLCJLCJLC" (at 120.725 135.725) (layer "F.SilkS") (tstamp 14deba1b-127a-4b5f-8638-f0d9bdceaa2c)
     (effects (font (size 1 1) (thickness 0.15)) (justify right))
   )
-  (gr_text "Octave Input PCB rev.5.0.1" (at 50.725 135.725) (layer "F.SilkS") (tstamp 4e5ed944-23f8-43e7-a788-e380ad785310)
+  (gr_text "Octave Input PCB rev.5.0.2" (at 50.725 135.725) (layer "F.SilkS") (tstamp 4e5ed944-23f8-43e7-a788-e380ad785310)
     (effects (font (size 1 1) (thickness 0.15)) (justify left))
   )
   (gr_text "RESET" (at 100.0125 113.1375) (layer "F.SilkS") (tstamp 6902300c-7b56-44c9-80b7-bda224347701)

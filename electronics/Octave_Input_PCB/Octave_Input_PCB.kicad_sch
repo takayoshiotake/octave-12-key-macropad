@@ -7,7 +7,7 @@
   (title_block
     (title "Octave - Input PCB")
     (date "2022-05-30")
-    (rev "5.0.1")
+    (rev "5.0.2")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
 
@@ -4269,7 +4269,7 @@
     (property "Reference" "C1" (id 0) (at 79.375 33.02 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "1uF" (id 1) (at 83.82 33.02 90))
+    (property "Value" "10uF" (id 1) (at 83.82 33.02 90))
     (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (id 2) (at 81.28 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4701,7 +4701,7 @@
     (property "Reference" "C2" (id 0) (at 107.315 33.02 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "1uF" (id 1) (at 111.76 33.02 90))
+    (property "Value" "10uF" (id 1) (at 111.76 33.02 90))
     (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (id 2) (at 109.22 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4895,10 +4895,10 @@
       (reference "#PWR0145") (unit 1) (value "+3V3") (footprint "")
     )
     (path "/b4a74826-80b4-490c-898e-4ec787ca4628"
-      (reference "C1") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (reference "C1") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/fd1749ad-5586-4b4d-8b0d-9b728b372a84"
-      (reference "C2") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
+      (reference "C2") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/2aae4336-d64e-44ab-8a3b-9b789928172e"
       (reference "C3") (unit 1) (value "1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")

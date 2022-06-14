@@ -42,8 +42,9 @@
 
     <img src="IMG_4557.jpg" width="160"/> <img src="IMG_4558.jpg" width="160"/> <img src="IMG_4559.jpg" width="160"/>
 
-- Software
-  - 📄 [software_first/README.md](software_first/README.md)
+## Software
+
+- 📄 [software/README.md](software/README.md)
 
 ### Issues
 

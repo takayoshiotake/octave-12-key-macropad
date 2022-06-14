@@ -75,4 +75,4 @@ However, at this time I do not have the USB VID and PID for this device, so I ca
 ## BOM and Software
 
 - [WIP] prototype-2
-- [[Closed] prototype-1](prototype/README.md)
+- [[Closed] prototype-1](prototype-1/README.md)

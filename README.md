@@ -5,8 +5,10 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Status
 
-- [ ] Second prototype: Custom MCU board
-- [x] First prototype
+- [ ] prototype-2: Custom MCU board
+  - [ ] Test
+  - [x] PCB
+- [x] prototype-1
 
 ## Specifications
 
@@ -54,12 +56,9 @@ In particular, the incremental encoder and stick controller are placed in easy-t
 📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.5.0.2)
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 
-Since USB VIDs and PIDs are not readily available to individuals, I decided to use the Adafruit QT Py RP2040 as is, which provides CircuitPython with built-in VID and PID.
+I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 and the software will run on CircuitPython built specifically for it.
 
-Also, most importantly, I have never designed an MCU circuit before, so to avoid risk, I will forgo a custom MCU PCB for this project.
-
-- MCU: Adafruit QT Py RP2040
-  - 🔗 <https://learn.adafruit.com/adafruit-qt-py-2040>
+However, at this time I do not have the USB VID and PID for this device, so I cannot release the firmware...
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch)
 
@@ -70,6 +69,7 @@ Also, most importantly, I have never designed an MCU circuit before, so to avoid
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
 
-## BOM
+## BOM and Software
 
-[[Closed] Prototype - First](prototype/README.md)
+- [WIP] prototype-2
+- [[Closed] prototype-1](prototype/README.md)

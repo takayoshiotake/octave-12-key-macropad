@@ -24,6 +24,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 ## Layout
 
 📄 [layout/keyboard-layout.png](layout/keyboard-layout.png) (rev.2)
+
 ![keyboard layout](layout/keyboard-layout.png)
 
 - 12 function keys (F1 - F12)
@@ -54,6 +55,7 @@ In particular, the incremental encoder and stick controller are placed in easy-t
 ## Schematic
 
 📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.5.0.2)
+
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 
 I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 and the software will run on CircuitPython built specifically for it.
@@ -65,6 +67,7 @@ However, at this time I do not have the USB VID and PID for this device, so I ca
 ## PCB
 
 📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.5.0.2)
+
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)

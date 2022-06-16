@@ -58,9 +58,7 @@ In particular, the incremental encoder and stick controller are placed in easy-t
 
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 
-I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 and the software will run on CircuitPython built specifically for it.
-
-However, at this time I do not have the USB VID and PID for this device, so I cannot release the firmware...
+I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 and the software runs on CircuitPython built specifically for it.
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch)
 
@@ -71,6 +69,14 @@ However, at this time I do not have the USB VID and PID for this device, so I ca
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
+
+## CircuitPython
+
+Software for the Octave (prototype-2) runs on CircuitPython.
+You can get the CircuitPython source code for the Octave from the following repository.
+
+- 🔗 [takayoshiotake/circuitpython:board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/board-octave-rp2040)
+- 🔗 <https://github.com/takayoshiotake/circuitpython/tree/b0170044fc17d5b7c204f4581f8307e8e4ef7431/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
 
 ## BOM and Software
 

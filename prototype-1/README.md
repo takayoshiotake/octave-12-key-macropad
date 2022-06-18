@@ -1,8 +1,6 @@
-# Prototype
+# [Closed] Prototype-1
 
-## [Closed] First
-
-### BOM
+## BOM
 
 **PCB:**
 
@@ -46,7 +44,7 @@
 
 - 📄 [software/README.md](software/README.md)
 
-### Issues
+## Issues
 
 - [x] Some pin names in U1 of schematic rev.2 are incorrect (D8-11 --> D7-10)
     ↪︎ Fixed in rev.3
@@ -67,7 +65,7 @@ The following issues are carried over to the next prototype.
     ↪︎ U1 takes up a lot of space.
     ↪︎ The only way seems to be to design a dedicated MCU circuit.
 
-### Results
+## Results
 
 The combination of PEC12R-4217F-S0024-ND and GLO-ACC-P75-RK-G fits perfectly.
 However, although the PEC12R-4217F-S0024-ND is great as a rotary encoder, it has a heavy click feeling and a loud sound, so I would like to find an alternative.

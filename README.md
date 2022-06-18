@@ -78,7 +78,36 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 - 🔗 [takayoshiotake/circuitpython:board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/board-octave-rp2040)
 - 🔗 <https://github.com/takayoshiotake/circuitpython/tree/b0170044fc17d5b7c204f4581f8307e8e4ef7431/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
 
-## BOM and Software
+## BOM & Software
 
-- [WIP] prototype-2
+[WIP] prototype-2
+
+**PCB:**
+
+| Material | Unit | Designator | Note | JLCPCB Part # |
+|-|-:|-|-|-|
+| Octave Input PCB rev.5.0.2 | 1 | n/a | JLCPCB |
+| 30pF 0402 | 2 | C15, C16 | PCBA | C1570 |
+| 10nF 0402 | 2 | C21, C22 | PCBA | C15195 |
+| 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
+| 1uF 0402 | 4 | C1-4 | PCBA | C52923 |
+| 1N4148WS | 15 | D1-15 | PCBA | C2128 |
+| HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector | C165948 |
+| WS2812C-2020-V1 | 1 | LED1 | PCBA, NeoPixel | C2976072 |
+| 27Ω 0402 | 2 | R3, R4 | PCBA | C352446 |
+| 1KΩ 0402 | 2 | R7, R8 | PCBA | C11702 |
+| 5.1KΩ 0402 | 2 | R1, R2 | PCBA | C25905 |
+| 10KΩ 0402 | 4 | R5, R6, R12, R14 | PCBA | C25744 |
+| 100KΩ 0402 | 2 | R11, R13 | PCBA | C25086 |
+| AP2112K-3.3 | 1 | U1 | PCBA | C51118 |
+| Raspberry Pi RP2040 | 1 | U2 | PCBA | C2040 |
+| W25Q64JVSSIQ | 1 | U3 | PCBA | C179171 |
+| 12MHz Crystal Resonator SMD-3225 | 1 | Y1 | PCBA | C9002 |
+| CPG151101S11-2 | 13 | SW1-13 | Kailh®︎ hot swap socket |
+| RKJXV122400R | 1 | SW14 | Alps Alpine stick controller |
+| PEC12R-4217F-S0024-ND | 1 | SW15 | Bourns incremental encoder |
+| SKRPANE010Copy | 1 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
+
+### History
+
 - [[Closed] prototype-1](prototype-1/README.md)

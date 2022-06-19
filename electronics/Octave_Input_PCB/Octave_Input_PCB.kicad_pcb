@@ -7,8 +7,8 @@
   (paper "A4")
   (title_block
     (title "Octave - Input PCB")
-    (date "2022-06-13")
-    (rev "5.0.3")
+    (date "2022-06-19")
+    (rev "5.0.4")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
 
@@ -1761,7 +1761,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp e8de0a88-acfe-4f6c-b1d7-1bd742727e51)
     )
-    (fp_text value "100K" (at 0 1.17) (layer "F.Fab") hide
+    (fp_text value "1K" (at 0 1.17) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 002a77f2-4590-4053-85f7-d642aeb322c5)
     )
@@ -4114,7 +4114,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 6a28b883-5a73-44f8-84e5-a86b1e3564dd)
     )
-    (fp_text value "100K" (at 0 1.17) (layer "F.Fab") hide
+    (fp_text value "1K" (at 0 1.17) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp e9b2f643-3069-4fae-8e9b-b179ec416156)
     )

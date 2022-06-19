@@ -124,6 +124,9 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 - [x] Fatal: SW21 and SW22 do not work.
   ↪︎ BOOT, RESET works when manually shorted to GND by wire.
   ↪︎ Fixed schematics and PCB in rev.5.0.3
+- [x] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R11, R13 in the schematic rev.5.0.2.
+  ↪︎ It can be solved by removing R1 and R3 and using pull-up of RP2040 instead, or use a **small** value such as 1K for R11 and R13.
+  ↪︎ Fixed schematics and PCB in rev.5.0.4
 
 ### History
 

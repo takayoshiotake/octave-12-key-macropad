@@ -6,8 +6,8 @@
 
   (title_block
     (title "Octave - Input PCB")
-    (date "2022-06-13")
-    (rev "5.0.3")
+    (date "2022-06-19")
+    (rev "5.0.4")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
 
@@ -3093,7 +3093,7 @@
     (property "Reference" "R13" (id 0) (at 222.504 144.78 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "100K" (id 1) (at 225.425 144.78 90))
+    (property "Value" "1K" (id 1) (at 225.425 144.78 90))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (id 2) (at 223.52 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3779,7 +3779,7 @@
     (property "Reference" "R11" (id 0) (at 260.604 144.78 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "100K" (id 1) (at 263.525 144.78 90))
+    (property "Value" "1K" (id 1) (at 263.525 144.78 90))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (id 2) (at 261.62 144.78 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4988,13 +4988,13 @@
       (reference "R8") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0402_1005Metric")
     )
     (path "/7f4d601a-fb1a-4382-a226-74a11a0738f3"
-      (reference "R11") (unit 1) (value "100K") (footprint "Resistor_SMD:R_0402_1005Metric")
+      (reference "R11") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0402_1005Metric")
     )
     (path "/62b0103d-af21-4c49-b859-e8808d0bd3cb"
       (reference "R12") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric")
     )
     (path "/289f8d94-cf1a-4684-9846-71756abe3891"
-      (reference "R13") (unit 1) (value "100K") (footprint "Resistor_SMD:R_0402_1005Metric")
+      (reference "R13") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0402_1005Metric")
     )
     (path "/0766aafe-e800-4540-9780-451cc215f060"
       (reference "R14") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric")

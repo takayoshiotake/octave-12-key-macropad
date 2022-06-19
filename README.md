@@ -91,6 +91,8 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 **PCB:**
 
+🏷 [prototype-2-pcb](https://github.com/takayoshiotake/octave-12-key-macropad/releases/tag/prototype-2-pcb)
+
 | Material | Unit | Designator | Note | JLCPCB Part # |
 |-|-:|-|-|-|
 | Octave Input PCB rev.5.0.2 | 1 | n/a | JLCPCB |

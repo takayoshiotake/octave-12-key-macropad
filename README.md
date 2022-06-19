@@ -92,7 +92,7 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 | 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
 | 1uF 0402 | 4 | C1-4 | PCBA | C52923 |
 | 1N4148WS | 15 | D1-15 | PCBA | C2128 |
-| HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector | C165948 |
+| HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector (Type-C) | C165948 |
 | WS2812C-2020-V1 | 1 | LED1 | PCBA, NeoPixel | C2976072 |
 | 27Ω 0402 | 2 | R3, R4 | PCBA | C352446 |
 | 1KΩ 0402 | 2 | R7, R8 | PCBA | C11702 |
@@ -102,11 +102,11 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 | AP2112K-3.3 | 1 | U1 | PCBA | C51118 |
 | Raspberry Pi RP2040 | 1 | U2 | PCBA | C2040 |
 | W25Q64JVSSIQ | 1 | U3 | PCBA | C179171 |
-| 12MHz Crystal Resonator SMD-3225 | 1 | Y1 | PCBA | C9002 |
-| CPG151101S11-2 | 13 | SW1-13 | Kailh®︎ hot swap socket |
+| 12MHz Crystal Resonator SMD-3225 | 1 | Y1 | PCBA, YSX221SL | C9002 |
+| CPG151101S11-2 | 13 | SW1-13 | Kailh®︎ hot swap socket (White) |
 | RKJXV122400R | 1 | SW14 | Alps Alpine stick controller |
 | PEC12R-4217F-S0024-ND | 1 | SW15 | Bourns incremental encoder |
-| SKRPANE010Copy | 1 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
+| SKRPANE010 | 1 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
 
 ### History
 

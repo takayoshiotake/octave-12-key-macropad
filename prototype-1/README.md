@@ -1,4 +1,4 @@
-# [Closed] Prototype-1
+# [Closed] prototype-1
 
 ## BOM
 

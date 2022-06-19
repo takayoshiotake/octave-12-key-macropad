@@ -1,0 +1,28 @@
+{
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true,
+    },
+  },
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": [
+    "--indent-size=2",
+  ],
+  "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
+  "python.languageServer": "Pylance",
+  "python.linting.pylintEnabled": false,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "python.analysis.extraPaths": [
+    "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.17-darwin-x64/boards/0x2886/0x0042",
+    "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.17-darwin-x64/stubs",
+    "/Users/takayoshi/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20220619/adafruit-circuitpython-bundle-py-20220619/lib"
+  ],
+  "circuitpython.board.version": null,
+  "circuitpython.board.vid": "0x2886",
+  "circuitpython.board.pid": "0x0042"
+}

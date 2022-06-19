@@ -1,0 +1,6 @@
+Found device at /Volumes/OCTAVE_CP, running CircuitPython 7.3.0-4-gc3b4d05dc0-dirty.
+A newer version of CircuitPython (7.3.0) is available.
+Get it here: https://circuitpython.org/board/takayoshiotake_octave_rp2040
+adafruit_pixelbuf==1.1.5
+neopixel==6.3.2
+adafruit_hid==5.2.4

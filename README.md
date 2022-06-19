@@ -115,6 +115,10 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 | PEC12R-4217F-S0024-ND | 1 | SW15 | Bourns incremental encoder |
 | SKRPANE010 | 1 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
 
+**Software:**
+
+- 📄 [software/README.md](software/README.md)
+
 ### History
 
 - [[Closed] prototype-1](prototype-1/README.md)

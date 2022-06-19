@@ -1,6 +1,7 @@
 import collections
 import time
 
+import analogio
 import board
 import digitalio
 import usb_hid
@@ -48,6 +49,7 @@ class CodeType:
   MOUSE_MOVE = 1
   MOUSE_BUTTON = 2
   LAYER_MOMENTRY = 3
+  LAYER_ALTERNATE = 4
 
 
 KeyAssignment = collections.namedtuple('KeyAssignment', ['type', 'code'])
@@ -70,7 +72,7 @@ KEY_MAP_LAYERS = [
         KeyAssignment(CodeType.LAYER_MOMENTRY, None),
         None,
         None,
-        None,
+        KeyAssignment(CodeType.LAYER_ALTERNATE, None),
     ],
     [
         None,
@@ -88,7 +90,7 @@ KEY_MAP_LAYERS = [
         None,
         None,
         None,
-        None,
+        KeyAssignment(CodeType.LAYER_ALTERNATE, None),
     ],
 ]
 
@@ -97,8 +99,30 @@ pixpower.switch_to_output(True, digitalio.DriveMode.PUSH_PULL)
 pixels = NeoPixel(board.NEOPIX, 1, auto_write=True)
 pixels[0] = (0, 0, 2)
 
+
 key_matrix = KeyMatrix()
 rotary_encoder = RotaryEncoder()
+stick_x = analogio.AnalogIn(board.GPIO27)
+stick_y = analogio.AnalogIn(board.GPIO26)
+
+# Adjustment for stick controller
+if key_matrix.scan_matrix()[0]:
+  stick_min = 65535
+  stick_max = 0
+  while True:
+    value = stick_x.value
+    stick_min = value if value < stick_min else stick_min
+    stick_max = value if value > stick_max else stick_max
+    print(value, stick_min, stick_max)
+# x: + => left, - => right
+# y: + => top, - => bottom
+# [x, y]
+stick_speed = 20
+stick_margin = [[32767 - 2048, 32767 + 2048],
+                [32767 - 2048, 32767 + 2048]]
+stick_range = [[32767 - 16384, 32767 + 16384],
+               [32767 - 16384, 32767 + 16384]]
+
 time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
 while True:
   try:
@@ -112,6 +136,7 @@ while True:
                           for _ in range(len(key_matrix.row_ios) * len(key_matrix.col_ios))]
     pressed_keys = [None for _ in range(len(key_event_planners))]
     scan_key_matrix_timing = time.monotonic()  # For debounce
+    scan_stick_timing = time.monotonic()
     while True:
       current_time = time.monotonic()
       if current_time >= scan_key_matrix_timing:
@@ -127,6 +152,9 @@ while True:
               pass
             elif key_assignment.type == CodeType.LAYER_MOMENTRY:
               key_map_layer = 1
+            elif key_assignment.type == CodeType.LAYER_ALTERNATE:
+              # xxx
+              KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[1] = KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[0]
             elif key_assignment.type == CodeType.KEYBOARD:
               keyboard.press(key_assignment.code)
             elif key_assignment.type == CodeType.MOUSE_MOVE:
@@ -170,6 +198,25 @@ while True:
           mouse.move(wheel=1)
         else:
           mouse.move(wheel=-1)
+
+      if current_time >= scan_stick_timing:
+        mouse_move = [0, 0]
+        stick_values = [stick_x.value, stick_y.value]
+        for i in range(2):
+          if stick_values[i] < stick_margin[i][0]:
+            mouse_move[i] = (stick_margin[i][0] - stick_values[i]) / \
+                (stick_margin[i][0] - stick_range[i][0])
+          elif stick_values[i] > stick_margin[i][1]:
+            mouse_move[i] = (stick_margin[i][1] - stick_values[i]) / \
+                (stick_range[i][1] - stick_margin[i][1])
+        mouse_move[0] = int(stick_speed * mouse_move[0])
+        mouse_move[1] = int(stick_speed * mouse_move[1])
+        if mouse_move[0] != 0 or mouse_move[1] != 0:
+          mouse.move(x=mouse_move[0], y=mouse_move[1])
+        scan_stick_timing += 0.001
+        if scan_stick_timing <= current_time:
+          scan_stick_timing = current_time + 0.001
+
   except Exception:
     pixels[0] = (0, 0, 2)
     time.sleep(3)

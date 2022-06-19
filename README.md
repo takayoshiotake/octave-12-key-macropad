@@ -75,8 +75,15 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 Software for the Octave (prototype-2) runs on CircuitPython.
 You can fetch the CircuitPython source code for the Octave from the following GitHub repo.
 
+**Stable:**
+
+- 🔗 [takayoshiotake/circuitpython:7.3.x-board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/7.3.x-board-octave-rp2040)
+  - <https://github.com/takayoshiotake/circuitpython/tree/c3b4d05dc04d74c6229506215eae799fb23f37ce/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
+
+**Latest:**
+
 - 🔗 [takayoshiotake/circuitpython:board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/board-octave-rp2040)
-- 🔗 <https://github.com/takayoshiotake/circuitpython/tree/b0170044fc17d5b7c204f4581f8307e8e4ef7431/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
+  - <https://github.com/takayoshiotake/circuitpython/tree/b0170044fc17d5b7c204f4581f8307e8e4ef7431/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
 
 ## BOM & Software
 

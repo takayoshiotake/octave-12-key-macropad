@@ -87,8 +87,6 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 ## BOM & Software
 
-[WIP] prototype-2
-
 **PCB:**
 
 🏷 [prototype-2-pcb](https://github.com/takayoshiotake/octave-12-key-macropad/releases/tag/prototype-2-pcb)
@@ -120,6 +118,12 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 **Software:**
 
 - 📄 [software/README.md](software/README.md)
+
+**Issues:**
+
+- [x] Fatal: SW21 and SW22 do not work.
+  ↪︎ BOOT, RESET works when manually shorted to GND by wire.
+  ↪︎ Fixed schematics and PCB in rev.5.0.3
 
 ### History
 

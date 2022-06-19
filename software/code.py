@@ -46,7 +46,8 @@ class KeyEventPlanner:
 class CodeType:
   KEYBOARD = 0
   MOUSE_MOVE = 1
-  LAYER_MOMENTRY = 2
+  MOUSE_BUTTON = 2
+  LAYER_MOMENTRY = 3
 
 
 KeyAssignment = collections.namedtuple('KeyAssignment', ['type', 'code'])
@@ -72,22 +73,22 @@ KEY_MAP_LAYERS = [
         None,
     ],
     [
-        KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
+        None,
+        None,
         KeyAssignment(CodeType.KEYBOARD, Keycode.UP_ARROW),
         None,
-        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 0, 'y': -1, 'wheel': 0}),
+        None,
         KeyAssignment(CodeType.KEYBOARD, Keycode.LEFT_ARROW),
         KeyAssignment(CodeType.KEYBOARD, Keycode.DOWN_ARROW),
         KeyAssignment(CodeType.KEYBOARD, Keycode.RIGHT_ARROW),
-        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 0, 'y': 1, 'wheel': 0}),
-        KeyAssignment(CodeType.MOUSE_MOVE, {'x': -1, 'y': 0, 'wheel': 0}),
-        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 1, 'y': 0, 'wheel': 0}),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
+        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.LEFT_BUTTON),
+        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.MIDDLE_BUTTON),
+        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.RIGHT_BUTTON),
         None,
         None,
         None,
         None,
-        None,
-        None
     ],
 ]
 
@@ -130,6 +131,8 @@ while True:
               keyboard.press(key_assignment.code)
             elif key_assignment.type == CodeType.MOUSE_MOVE:
               mouse.move(**key_assignment.code)
+            elif key_assignment.type == CodeType.MOUSE_BUTTON:
+              mouse.press(key_assignment.code)
           elif key_event == KeyEvent.LONG_PRESS:
             # print(f"""pressed : {i}""")
             key_assignment = pressed_keys[i]
@@ -153,6 +156,8 @@ while True:
               key_map_layer = 0
             elif key_assignment.type == CodeType.KEYBOARD:
               keyboard.release(key_assignment.code)
+            elif key_assignment.type == CodeType.MOUSE_BUTTON:
+              mouse.release(key_assignment.code)
 
         scan_key_matrix_timing += 0.01
         if scan_key_matrix_timing <= current_time:

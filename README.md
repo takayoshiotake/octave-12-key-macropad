@@ -83,8 +83,9 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 **Latest:**
 
-- 🔗 [takayoshiotake/circuitpython:board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/board-octave-rp2040)
-  - <https://github.com/takayoshiotake/circuitpython/tree/b0170044fc17d5b7c204f4581f8307e8e4ef7431/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
+- 🔗 [adafruit/circuitpython](https://github.com/adafruit/circuitpython)
+  - <https://github.com/adafruit/circuitpython/tree/main/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
+- 🔗 [Built UF2](https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/takayoshiotake_octave_rp2040/)
 
 ## BOM & Software
 

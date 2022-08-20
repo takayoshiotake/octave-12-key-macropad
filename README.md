@@ -5,8 +5,9 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Status
 
-- [ ] prototype-2: Custom MCU board
-  - [ ] Consideration
+- [ ] prototype-3: Simple design
+- [x] prototype-2: Custom MCU board
+  - [x] Consideration
   - [x] Test
   - [x] PCB
 - [x] prototype-1

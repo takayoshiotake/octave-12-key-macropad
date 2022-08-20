@@ -60,11 +60,13 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 - [x] Fatal: Rotation cannot be detected because SingalA and SignalB do not go to Low level due to the value of R11, R13 in the schematic rev.5.0.2.
   ↪︎ It can be solved by removing R1 and R3 and using pull-up of RP2040 instead, or use a **small** value such as 1K for R11 and R13.
   ↪︎ Fixed schematics and PCB in rev.5.0.4
-- [ ] The incremental encoder and stick controller are difficult to operate with this placement on the PCB.
+- [x] The incremental encoder and stick controller are difficult to operate with this placement on the PCB.
   ↪︎ These input devices are not considered important and will be removed in the next version. It should be simple.
-- [ ] Custom MCU boards are expensive to manufacture and require a lot of work, including the need for USB VID/PID. Also, the board is larger due to the USB-C connector.
+- [x] Custom MCU boards are expensive to manufacture and require a lot of work, including the need for USB VID/PID. Also, the board is larger due to the USB-C connector.
   ↪︎ It seems that it would be better to separate the IO board from the MCU board. However, if they are connected with pin headers, it will be difficult to design a housing as in Prototype 1, so I think it is better to connect them with cables.
+  ↪︎ Considered in next prototype.
 
 ## Results
 
-WIP
+Remove the incremental encoders and stick controller.
+And for the next prototype, I will consider whether to divide the PCB into an MCU board and an IO board, and whether to adopt a custom MCU board.

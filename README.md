@@ -77,8 +77,9 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 ## BOM & Software
 
-- [[WIP] prototype-2](prototype-2/README.md)
+WIP
 
 ### History
 
+- [[Closed] prototype-2](prototype-2/README.md)
 - [[Closed] prototype-1](prototype-1/README.md)

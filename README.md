@@ -16,8 +16,6 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 - USB-C (USB2.0, HID)
 - Hot-swap sockets for MX compatible switches
-- Incremental encoder with push momentary switch
-- Stick controller with push momentary switch
 - Programmable firmware (CircuitPython)
 - No LEDs
 - No keycaps
@@ -25,20 +23,11 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Layout
 
-📄 [layout/keyboard-layout.png](layout/keyboard-layout.png) (rev.2)
+📄 [layout/keyboard-layout.png](layout/keyboard-layout.png) (rev.3)
 
 ![keyboard layout](layout/keyboard-layout.png)
 
 - 12 function keys (F1 - F12)
-- 1 momentary layer key (MO)
-- 1 incremental encoder (Knob)
-- 1 stick controller (Stick)
-
-It is important that there are four rows.
-Just like the function keys on many keyboards are divided into four rows each. It is also important that it is easy to operate with one hand.
-
-It is designed to be used with the left hand.
-In particular, the incremental encoder and stick controller are placed in easy-to-operate positions.
 
 **RAW data for Keyboard Layout Editor v0.15:**
 
@@ -48,8 +37,6 @@ In particular, the incremental encoder and stick controller are placed in easy-t
 ["F1","F2","F3","F4"],
 ["F5","F6","F7","F8"],
 ["F9","F10","F11","F12"],
-["MO",{x:2,c:"#c8b273"},"Knob"],
-[{y:-0.5,x:1.5,c:"#666666",t:"#cccccc"},"Stick"],
 ```
 
 - 🔗 [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)

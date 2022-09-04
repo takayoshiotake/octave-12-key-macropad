@@ -6,6 +6,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 ## Status
 
 - [ ] prototype-3: Simple design
+  - [ ] [WIP] PCB
 - [x] prototype-2: Custom MCU board
   - [x] Consideration
   - [x] Test
@@ -43,7 +44,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Schematic
 
-📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.5.0.2)
+📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.6.0.0)
 
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 

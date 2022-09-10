@@ -44,7 +44,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Schematic
 
-📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.6.0.0)
+📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.6.0.1)
 
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 

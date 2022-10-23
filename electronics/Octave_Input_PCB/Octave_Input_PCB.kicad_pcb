@@ -7,8 +7,8 @@
   (paper "A4")
   (title_block
     (title "Octave - Input PCB")
-    (date "2022-09-04")
-    (rev "6.0.0")
+    (date "2022-10-24")
+    (rev "6.1.x")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
 

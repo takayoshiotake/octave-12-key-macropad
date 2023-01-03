@@ -6,8 +6,8 @@
 
   (title_block
     (title "Octave - Input PCB")
-    (date "2022-10-23")
-    (rev "6.1.1")
+    (date "2023-01-04")
+    (rev "6.1.2")
     (comment 4 "https://github.com/takayoshiotake/octave-12-key-macropad")
   )
 
@@ -2566,13 +2566,13 @@
     (pin "2" (uuid b1b4450e-32bc-49af-89c5-9394fdaf94af))
   )
 
-  (symbol (lib_id "Octave_Library:Alps_Alpine_SKRP") (at 29.21 170.18 0) (unit 1)
+  (symbol (lib_id "Octave_Library:Alps_Alpine_SKRP") (at 29.21 170.18 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 130f44fe-e527-4bcc-86bb-5f52ac0ca6b7)
     (property "Reference" "SW21" (id 0) (at 29.21 170.18 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "Alps_Alpine_SKRP" (id 1) (at 28.5751 173.99 90)
+    (property "Value" "Alps_Alpine_SKRP" (id 1) (at 29.8449 173.99 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
     (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_Series" (id 2) (at 29.21 175.26 0)
@@ -3010,13 +3010,13 @@
     (pin "2" (uuid b9ad81f8-57ef-47e3-a33f-a73bdba6d936))
   )
 
-  (symbol (lib_id "Octave_Library:Alps_Alpine_SKRP") (at 119.38 50.8 0) (unit 1)
+  (symbol (lib_id "Octave_Library:Alps_Alpine_SKRP") (at 119.38 50.8 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4dae5535-a9c3-4172-8f7d-fac9a279b13a)
     (property "Reference" "SW22" (id 0) (at 119.38 50.8 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Value" "Alps_Alpine_SKRP" (id 1) (at 118.7451 54.61 90)
+    (property "Value" "Alps_Alpine_SKRP" (id 1) (at 120.0149 54.61 90)
       (effects (font (size 1.27 1.27)) (justify right) hide)
     )
     (property "Footprint" "Octave_Library:Tactile_Switch_SKRP_Series" (id 2) (at 119.38 55.88 0)

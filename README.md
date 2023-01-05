@@ -44,7 +44,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Schematic
 
-📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.6.1.0)
+📄 [electronics/Octave_Input_PCB.svg](electronics/Octave_Input_PCB.svg) (rev.6.1.2)
 
 ![schematic svg](electronics/Octave_Input_PCB.svg)
 
@@ -54,7 +54,7 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 
 ## PCB
 
-📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.5.0.2)
+📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.6.1.0)
 
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 

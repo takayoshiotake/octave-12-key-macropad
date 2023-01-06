@@ -67,7 +67,8 @@
     - <https://www.takachi-el.co.jp/products/WSC>
 
 - FFC
-  - Molex 151660126 (0.5mm pitch, 12 circuits, Type D)
+  - Molex 15166012x (0.5mm pitch, 12 circuits, Type D)
+    - <https://www.molex.com/molex/products/part-detail/cable/0151660122>
     - <https://www.molex.com/molex/products/part-detail/cable/0151660126>
 
 ## PCB

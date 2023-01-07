@@ -80,6 +80,12 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 WIP
 
+## Plate
+
+📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.0)
+
+![plate 3d png](mechanics/Octave_Plate_3D.png)
+
 ### History
 
 - [[Closed] prototype-2](prototype-2/README.md)

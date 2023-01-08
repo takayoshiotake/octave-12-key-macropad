@@ -82,9 +82,11 @@ WIP
 
 ## Plate
 
-📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.0)
+📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.1)
 
 ![plate 3d png](mechanics/Octave_Plate_3D.png)
+
+📄 [mechanics/Octave_Plate/Octave_Plate.kicad_pcb](mechanics/Octave_Plate/Octave_Plate.kicad_pcb)
 
 ### History
 

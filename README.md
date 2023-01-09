@@ -82,7 +82,7 @@ WIP
 
 ## Plate
 
-📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.1)
+📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.2)
 
 ![plate 3d png](mechanics/Octave_Plate_3D.png)
 

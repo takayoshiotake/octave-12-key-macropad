@@ -54,7 +54,7 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 
 ## PCB
 
-📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.6.1.2)
+📄 [electronics/Octave_Input_PCB_3D.png](electronics/Octave_Input_PCB_3D.png) (rev.6.1.3)
 
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
@@ -82,7 +82,7 @@ WIP
 
 ## Plate
 
-📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.2)
+📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.3)
 
 ![plate 3d png](mechanics/Octave_Plate_3D.png)
 

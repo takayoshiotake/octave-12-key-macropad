@@ -27,6 +27,12 @@
 (.venv) % circup --path /Volumes/OCTAVE_CP install -r requirements.txt
 ```
 
+Alternatively:
+
+```shell-session
+% cp -r lib /Volumes/OCTAVE_CP/
+```
+
 ## Upload
 
 ```shell-session

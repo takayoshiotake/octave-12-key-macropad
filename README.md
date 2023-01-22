@@ -89,8 +89,6 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 WIP
 
-**PCB:**
-
 🏷 [prototype-3-pcb](https://github.com/takayoshiotake/octave-12-key-macropad/releases/tag/prototype-3-pcb)
 
 | Material | Unit | Designator | Note | JLCPCB Part # |
@@ -98,7 +96,28 @@ WIP
 | Octave Input PCB rev.6.1.3 | 1 | n/a | JLCPCB |
 | Octave Plate rev.1.0.3 | 1 | n/a | JLCPCB, Alminium PCB (t=1.6mm) |
 | 0151660122 | 1 | n/a | Molex 0.50mm pitch FFC, Type D, 76.00mm, 12 circuits |
-| [WIP] ... |
+| CPG151101S11-2 | 12 | SW1-12 | Kailh®︎ hot swap socket (White) |
+||
+| 30pF 0402 | 2 | C15, C16 | PCBA | C1570 |
+| 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
+| 1uF 0402 | 2 | C3-4 | PCBA | C52923 |
+| 10uF 0402 | 2 | C1-2 | PCBA | C15525 |
+| 1N4148WS | 12 | D1-12 | PCBA | C2128 |
+| HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector (Type-C) | C165948 |
+| JUSHUO_AFC01-S12FCC-00 | 2 | J2, J3 | PCBA, FFC Connector (0.50mm pitch, 12 circuits) | C262268 |
+| 27Ω 0402 | 2 | R3, R4 | PCBA | C352446 |
+| 1KΩ 0402 | 2 | R7, R8 | PCBA | C11702 |
+| 5.1KΩ 0402 | 2 | R1, R2 | PCBA | C25905 |
+| 10KΩ 0402 | 2 | R5, R6 | PCBA | C25744 |
+| AP2112K-3.3 | 1 | U1 | PCBA | C51118 |
+| Raspberry Pi RP2040 | 1 | U2 | PCBA | C2040 |
+| W25Q64JVSSIQ | 1 | U3 | PCBA | C179171 |
+| 12MHz Crystal Resonator SMD-3225 | 1 | Y1 | PCBA, YSX221SL | C9002 |
+| SKRPANE010 | 2 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
+||
+| WS2812C-2020-V1 | 1 | LED1 *[1]* | PCBA, NeoPixel | C2976072 |
+
+MEMO: *[1]* To reduce costs, I did not assemble LED1 with PCBA.
 
 - Octave Input PCB rev.6.1.3 (PCBA)
 

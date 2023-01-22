@@ -5,6 +5,8 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Status
 
+<img src="prototype-3/IMG_4921.jpg" width="160"/>
+
 - [ ] prototype-3: Simple design
   - [ ] [WIP] Test
   - [x] PCB

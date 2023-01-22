@@ -34,7 +34,7 @@
 % cp -r octave_pcb /Volumes/OCTAVE_CP/
 ```
 
-MEMO: After uploading boot.py, you need to hold down SW13 to boot to enable the USB drive.
+MEMO: After uploading boot.py, you need to hold down SW1 to boot to enable the USB drive.
 
 ## Note
 

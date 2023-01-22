@@ -1,7 +1,6 @@
 import collections
 import time
 
-import analogio
 import board
 import digitalio
 import usb_hid
@@ -69,28 +68,20 @@ KEY_MAP_LAYERS = [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F10),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F11),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F12),
-        KeyAssignment(CodeType.LAYER_MOMENTRY, None),
-        None,
-        None,
-        KeyAssignment(CodeType.LAYER_ALTERNATE, None),
     ],
     [
         None,
         None,
-        KeyAssignment(CodeType.KEYBOARD, Keycode.UP_ARROW),
-        None,
-        None,
-        KeyAssignment(CodeType.KEYBOARD, Keycode.LEFT_ARROW),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.DOWN_ARROW),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.RIGHT_ARROW),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
-        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.LEFT_BUTTON),
-        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.MIDDLE_BUTTON),
-        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.RIGHT_BUTTON),
         None,
         None,
         None,
-        KeyAssignment(CodeType.LAYER_ALTERNATE, None),
+        None,
+        None,
+        None,
+        None,
+        None,
+        None,
+        None,
     ],
 ]
 
@@ -101,27 +92,6 @@ pixels[0] = (0, 0, 2)
 
 
 key_matrix = KeyMatrix()
-rotary_encoder = RotaryEncoder()
-stick_x = analogio.AnalogIn(board.GPIO27)
-stick_y = analogio.AnalogIn(board.GPIO26)
-
-# Adjustment for stick controller
-if key_matrix.scan_matrix()[0]:
-  stick_min = 65535
-  stick_max = 0
-  while True:
-    value = stick_x.value
-    stick_min = value if value < stick_min else stick_min
-    stick_max = value if value > stick_max else stick_max
-    print(value, stick_min, stick_max)
-# x: + => left, - => right
-# y: + => top, - => bottom
-# [x, y]
-stick_speed = 20
-stick_margin = [[32767 - 2048, 32767 + 2048],
-                [32767 - 2048, 32767 + 2048]]
-stick_range = [[32767 - 16384, 32767 + 16384],
-               [32767 - 16384, 32767 + 16384]]
 
 time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
 while True:
@@ -190,32 +160,6 @@ while True:
         scan_key_matrix_timing += 0.01
         if scan_key_matrix_timing <= current_time:
           scan_key_matrix_timing = current_time + 0.01
-
-      direction = rotary_encoder.detect_direction()
-      if direction != 0:
-        print(f"""rotated : {"CW" if direction > 0 else "CCW"}""")
-        if direction > 0:
-          mouse.move(wheel=1)
-        else:
-          mouse.move(wheel=-1)
-
-      if current_time >= scan_stick_timing:
-        mouse_move = [0, 0]
-        stick_values = [stick_x.value, stick_y.value]
-        for i in range(2):
-          if stick_values[i] < stick_margin[i][0]:
-            mouse_move[i] = (stick_margin[i][0] - stick_values[i]) / \
-                (stick_margin[i][0] - stick_range[i][0])
-          elif stick_values[i] > stick_margin[i][1]:
-            mouse_move[i] = (stick_margin[i][1] - stick_values[i]) / \
-                (stick_range[i][1] - stick_margin[i][1])
-        mouse_move[0] = int(stick_speed * mouse_move[0])
-        mouse_move[1] = int(stick_speed * mouse_move[1])
-        if mouse_move[0] != 0 or mouse_move[1] != 0:
-          mouse.move(x=mouse_move[0], y=mouse_move[1])
-        scan_stick_timing += 0.001
-        if scan_stick_timing <= current_time:
-          scan_stick_timing = current_time + 0.001
 
   except Exception:
     pixels[0] = (0, 0, 2)

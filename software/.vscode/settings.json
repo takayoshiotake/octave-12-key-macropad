@@ -18,11 +18,11 @@
     "reportMissingModuleSource": "none"
   },
   "python.analysis.extraPaths": [
-    "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.17-darwin-x64/boards/0x2886/0x0042",
+    "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.17-darwin-x64/boards/0x3171/0x0101",
     "/Users/takayoshi/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.17-darwin-x64/stubs",
-    "/Users/takayoshi/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20220619/adafruit-circuitpython-bundle-py-20220619/lib"
+    "/Users/takayoshi/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20230122/adafruit-circuitpython-bundle-py-20230122/lib"
   ],
   "circuitpython.board.version": null,
-  "circuitpython.board.vid": "0x2886",
-  "circuitpython.board.pid": "0x0042"
+  "circuitpython.board.vid": "0x3171",
+  "circuitpython.board.pid": "0x0101"
 }

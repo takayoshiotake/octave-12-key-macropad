@@ -16,7 +16,7 @@
 
     - 🔗 [https://learn.adafruit.com/welcome-to-circuitpython/renaming-circuitpy](https://learn.adafruit.com/welcome-to-circuitpython/renaming-circuitpy)
 
-- 📄 [circuitpython-takayoshiotake_octave_rp2040-7.3.0.uf2](circuitpython-bin/circuitpython-takayoshiotake_octave_rp2040-7.3.0.uf2) (2023-01-22)
+- 📄 [circuitpython-takayoshiotake_octave_rp2040-7.3.0.uf2](../circuitpython-bin/circuitpython-takayoshiotake_octave_rp2040-7.3.0.uf2) (2023-01-22)
 
 ## Install packages
 

@@ -11,7 +11,6 @@ from adafruit_hid.mouse import Mouse
 from neopixel import NeoPixel
 
 from octave_pcb.key_matrix import KeyMatrix
-from octave_pcb.rotary_encoder import RotaryEncoder
 
 
 class KeyEvent:
@@ -49,6 +48,7 @@ class CodeType:
   MOUSE_BUTTON = 2
   LAYER_MOMENTRY = 3
   LAYER_ALTERNATE = 4
+  LAYER_SWITCH = 5
 
 
 KeyAssignment = collections.namedtuple('KeyAssignment', ['type', 'code'])
@@ -64,10 +64,39 @@ KEY_MAP_LAYERS = [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F6),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F7),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F8),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
+        None,
+        KeyAssignment(CodeType.LAYER_SWITCH, None),
+        KeyAssignment(CodeType.LAYER_MOMENTRY, None),
+    ],
+    [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F9),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F10),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F11),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F12),
+        None,
+        None,
+        None,
+        None,
+        None,
+        None,
+        None,
+        None,
+    ],
+    # Switch
+    [
+        KeyAssignment(CodeType.MOUSE_MOVE, {'x': -1}),
+        KeyAssignment(CodeType.MOUSE_MOVE, {'y': 1}),
+        KeyAssignment(CodeType.MOUSE_MOVE, {'y': -1}),
+        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 1}),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.LEFT_ARROW),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.DOWN_ARROW),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.UP_ARROW),
+        KeyAssignment(CodeType.KEYBOARD, Keycode.RIGHT_ARROW),
+        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.LEFT_BUTTON),
+        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.RIGHT_BUTTON),
+        KeyAssignment(CodeType.LAYER_SWITCH, None),
+        KeyAssignment(CodeType.LAYER_SWITCH, None),
     ],
     [
         None,
@@ -125,6 +154,10 @@ while True:
             elif key_assignment.type == CodeType.LAYER_ALTERNATE:
               # xxx
               KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[1] = KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[0]
+            elif key_assignment.type == CodeType.LAYER_SWITCH:
+              # xxx
+              KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[2] = KEY_MAP_LAYERS[2], KEY_MAP_LAYERS[0]
+              KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[3] = KEY_MAP_LAYERS[3], KEY_MAP_LAYERS[1]
             elif key_assignment.type == CodeType.KEYBOARD:
               keyboard.press(key_assignment.code)
             elif key_assignment.type == CodeType.MOUSE_MOVE:

@@ -100,8 +100,8 @@ WIP
 ||
 | 30pF 0402 | 2 | C15, C16 | PCBA | C1570 |
 | 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
-| 1uF 0402 | 2 | C3-4 | PCBA | C52923 |
-| 10uF 0402 | 2 | C1-2 | PCBA | C15525 |
+| 1uF 0402 | 2 | C3, C4 | PCBA | C52923 |
+| 10uF 0402 | 2 | C1, C2 | PCBA | C15525 |
 | 1N4148WS | 12 | D1-12 | PCBA | C2128 |
 | HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector (Type-C) | C165948 |
 | JUSHUO_AFC01-S12FCC-00 | 2 | J2, J3 | PCBA, FFC Connector (0.50mm pitch, 12 circuits) | C262268 |

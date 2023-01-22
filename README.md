@@ -63,7 +63,7 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 
 ## CircuitPython
 
-Software for the Octave (prototype-2) runs on CircuitPython.
+Software for the Octave (prototype-2, prototype-3) runs on CircuitPython.
 You can fetch the CircuitPython source code for the Octave from the following GitHub repo.
 
 **Stable:**
@@ -86,8 +86,6 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 📄 [mechanics/Octave_Plate/Octave_Plate.kicad_pcb](mechanics/Octave_Plate/Octave_Plate.kicad_pcb)
 
 ## BOM & Software
-
-WIP
 
 🏷 [prototype-3-pcb](https://github.com/takayoshiotake/octave-12-key-macropad/releases/tag/prototype-3-pcb)
 
@@ -126,6 +124,10 @@ MEMO: *[1]* To reduce costs, I did not assemble LED1 with PCBA.
 - Octave Plate rev.1.0.3
 
     <img src="prototype-3/IMG_4909.jpg" height="160"/> <img src="prototype-3/IMG_4910.jpg" height="160"/>
+
+### Software
+
+- [[WIP] Software](software/README.md)
 
 ### History
 

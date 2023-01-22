@@ -6,7 +6,8 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 ## Status
 
 - [ ] prototype-3: Simple design
-  - [ ] [WIP] PCB
+  - [ ] [WIP] Test
+  - [x] PCB
 - [x] prototype-2: Custom MCU board
   - [x] Consideration
   - [x] Test
@@ -76,10 +77,6 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
   - <https://github.com/adafruit/circuitpython/tree/main/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
 - 🔗 [Built UF2](https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/takayoshiotake_octave_rp2040/)
 
-## BOM & Software
-
-WIP
-
 ## Plate
 
 📄 [mechanics/Octave_Plate_3D.png](mechanics/Octave_Plate_3D.png) (rev.1.0.3)
@@ -87,6 +84,29 @@ WIP
 ![plate 3d png](mechanics/Octave_Plate_3D.png)
 
 📄 [mechanics/Octave_Plate/Octave_Plate.kicad_pcb](mechanics/Octave_Plate/Octave_Plate.kicad_pcb)
+
+## BOM & Software
+
+WIP
+
+**PCB:**
+
+🏷 [prototype-3-pcb](https://github.com/takayoshiotake/octave-12-key-macropad/releases/tag/prototype-3-pcb)
+
+| Material | Unit | Designator | Note | JLCPCB Part # |
+|-|-:|-|-|-|
+| Octave Input PCB rev.6.1.3 | 1 | n/a | JLCPCB |
+| Octave Plate rev.1.0.3 | 1 | n/a | JLCPCB, Alminium PCB (t=1.6mm) |
+| 0151660122 | 1 | n/a | Molex 0.50mm pitch FFC, Type D, 76.00mm, 12 circuits |
+| [WIP] ... |
+
+- Octave Input PCB rev.6.1.3 (PCBA)
+
+    <img src="prototype-3/IMG_4905.jpg" height="160"/> <img src="prototype-3/IMG_4906.jpg" height="160"/>
+
+- Octave Plate rev.1.0.3
+
+    <img src="prototype-3/IMG_4909.jpg" height="160"/> <img src="prototype-3/IMG_4910.jpg" height="160"/>
 
 ### History
 

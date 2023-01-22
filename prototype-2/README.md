@@ -14,7 +14,8 @@
 | 30pF 0402 | 2 | C15, C16 | PCBA | C1570 |
 | 10nF 0402 | 2 | C21, C22 | PCBA | C15195 |
 | 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
-| 1uF 0402 | 4 | C1-4 | PCBA | C52923 |
+| 1uF 0402 | 2 | C3, C4 | PCBA | C52923 |
+| 10uF 0402 | 2 | C1, C2 | PCBA | C15525 |
 | 1N4148WS | 15 | D1-15 | PCBA | C2128 |
 | HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector (Type-C) | C165948 |
 | WS2812C-2020-V1 | 1 | LED1 | PCBA, NeoPixel | C2976072 |
@@ -30,7 +31,7 @@
 | CPG151101S11-2 | 13 | SW1-13 | Kailh®︎ hot swap socket (White) |
 | RKJXV122400R | 1 | SW14 | Alps Alpine stick controller |
 | PEC12R-4217F-S0024-ND | 1 | SW15 | Bourns incremental encoder |
-| SKRPANE010 | 1 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
+| SKRPANE010 | 2 | SW21, SW22 | PCBA, Alps Alpine tactile switch | C470426 |
 
 ## CircuitPython
 

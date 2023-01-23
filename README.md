@@ -8,8 +8,9 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 <img src="prototype-3/IMG_4921.jpg" width="160"/>
 
 - [ ] prototype-3: Simple design
-  - [ ] [WIP] Test
-  - [x] PCB
+  - [ ] Enclosure
+  - [x] Test: OK!
+  - [x] PCB: OK!
 - [x] prototype-2: Custom MCU board
   - [x] Consideration
   - [x] Test

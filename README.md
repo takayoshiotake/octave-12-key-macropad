@@ -5,12 +5,11 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Status
 
-<img src="prototype-3/IMG_4921.jpg" width="160"/>
-<img src="prototype-3/IMG_4947.jpg" width="160"/>
-<img src="prototype-3/IMG_4948.jpg" width="160"/>
+<img src="prototype-3/IMG_4951.jpg" height="160"/>
+<img src="prototype-3/IMG_4952.jpg" height="160"/>
 
-- [ ] prototype-3: Simple design
-  - [ ] Enclosure
+- [x] prototype-3: Simple design
+  - [x] Enclosure: OK!
   - [x] Test: OK!
   - [x] PCB: OK!
 - [x] prototype-2: Custom MCU board
@@ -144,6 +143,12 @@ MEMO: *[1]* To reduce costs, I did not assemble LED1 with PCBA.
 - Octave Plate rev.1.0.3
 
     <img src="prototype-3/IMG_4909.jpg" height="160"/> <img src="prototype-3/IMG_4910.jpg" height="160"/>
+
+- Assembly
+
+    <img src="prototype-3/IMG_4921.jpg" width="160"/>
+    <img src="prototype-3/IMG_4947.jpg" width="160"/>
+    <img src="prototype-3/IMG_4948.jpg" width="160"/>
 
 ### Software
 

@@ -4,6 +4,8 @@ import time
 import board
 import digitalio
 import usb_hid
+from adafruit_hid.consumer_control import ConsumerControl
+from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 from adafruit_hid.keycode import Keycode
@@ -49,6 +51,7 @@ class CodeType:
   LAYER_MOMENTRY = 3
   LAYER_ALTERNATE = 4
   LAYER_SWITCH = 5
+  CONSUMER_CONTROL = 6
 
 
 KeyAssignment = collections.namedtuple('KeyAssignment', ['type', 'code'])
@@ -65,8 +68,8 @@ KEY_MAP_LAYERS = [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F7),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F8),
         KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
-        None,
-        KeyAssignment(CodeType.LAYER_SWITCH, None),
+        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.VOLUME_DECREMENT),
+        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.VOLUME_INCREMENT),
         KeyAssignment(CodeType.LAYER_MOMENTRY, None),
     ],
     [
@@ -83,35 +86,35 @@ KEY_MAP_LAYERS = [
         None,
         None,
     ],
-    # Switch
-    [
-        KeyAssignment(CodeType.MOUSE_MOVE, {'x': -1}),
-        KeyAssignment(CodeType.MOUSE_MOVE, {'y': 1}),
-        KeyAssignment(CodeType.MOUSE_MOVE, {'y': -1}),
-        KeyAssignment(CodeType.MOUSE_MOVE, {'x': 1}),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.LEFT_ARROW),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.DOWN_ARROW),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.UP_ARROW),
-        KeyAssignment(CodeType.KEYBOARD, Keycode.RIGHT_ARROW),
-        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.LEFT_BUTTON),
-        KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.RIGHT_BUTTON),
-        KeyAssignment(CodeType.LAYER_SWITCH, None),
-        KeyAssignment(CodeType.LAYER_SWITCH, None),
-    ],
-    [
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-        None,
-    ],
+    # # Switch
+    # [
+    #     KeyAssignment(CodeType.MOUSE_MOVE, {'x': -1}),
+    #     KeyAssignment(CodeType.MOUSE_MOVE, {'y': 1}),
+    #     KeyAssignment(CodeType.MOUSE_MOVE, {'y': -1}),
+    #     KeyAssignment(CodeType.MOUSE_MOVE, {'x': 1}),
+    #     KeyAssignment(CodeType.KEYBOARD, Keycode.LEFT_ARROW),
+    #     KeyAssignment(CodeType.KEYBOARD, Keycode.DOWN_ARROW),
+    #     KeyAssignment(CodeType.KEYBOARD, Keycode.UP_ARROW),
+    #     KeyAssignment(CodeType.KEYBOARD, Keycode.RIGHT_ARROW),
+    #     KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.LEFT_BUTTON),
+    #     KeyAssignment(CodeType.MOUSE_BUTTON, Mouse.RIGHT_BUTTON),
+    #     KeyAssignment(CodeType.LAYER_SWITCH, None),
+    #     KeyAssignment(CodeType.LAYER_SWITCH, None),
+    # ],
+    # [
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    #     None,
+    # ],
 ]
 
 pixpower = digitalio.DigitalInOut(board.NEOPIX_POWER)
@@ -125,6 +128,7 @@ key_matrix = KeyMatrix()
 time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
 while True:
   try:
+    consumer_control = ConsumerControl(usb_hid.devices)
     keyboard = Keyboard(usb_hid.devices)
     keyboard_layout = KeyboardLayoutUS(keyboard)
     mouse = Mouse(usb_hid.devices)
@@ -164,6 +168,8 @@ while True:
               mouse.move(**key_assignment.code)
             elif key_assignment.type == CodeType.MOUSE_BUTTON:
               mouse.press(key_assignment.code)
+            elif key_assignment.type == CodeType.CONSUMER_CONTROL:
+              consumer_control.press(key_assignment.code)
           elif key_event == KeyEvent.LONG_PRESS:
             # print(f"""pressed : {i}""")
             key_assignment = pressed_keys[i]
@@ -189,6 +195,8 @@ while True:
               keyboard.release(key_assignment.code)
             elif key_assignment.type == CodeType.MOUSE_BUTTON:
               mouse.release(key_assignment.code)
+            elif key_assignment.type == CodeType.CONSUMER_CONTROL:
+              consumer_control.release()
 
         scan_key_matrix_timing += 0.01
         if scan_key_matrix_timing <= current_time:

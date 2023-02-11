@@ -91,8 +91,8 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 
 ## Enclosure
 
-📄 [mechanics/Octave_Enclosure-Case.stl](mechanics/Octave_Enclosure-Case.stl) (rev.1.0.0)
-📄 [mechanics/Octave_Enclosure-Top Frame.stl](mechanics/Octave_Enclosure-Top%20Frame.stl) (rev.1.0.0)
+- 📄 [mechanics/Octave_Enclosure-Case.stl](mechanics/Octave_Enclosure-Case.stl) (rev.1.0.0)
+- 📄 [mechanics/Octave_Enclosure-Top Frame.stl](mechanics/Octave_Enclosure-Top%20Frame.stl) (rev.1.0.0)
 
 ## BOM & Software
 

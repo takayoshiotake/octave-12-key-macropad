@@ -5,8 +5,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Status
 
-<img src="prototype-3/IMG_4951.jpg" height="160"/>
-<img src="prototype-3/IMG_4952.jpg" height="160"/>
+<img src="prototype-3/IMG_4951.jpg" height="160"/> <img src="prototype-3/IMG_4952.jpg" height="160"/>
 
 - [x] prototype-3: Simple design
   - [x] Enclosure: OK!

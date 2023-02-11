@@ -105,6 +105,14 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 | 0151660122 | 1 | n/a | Molex 0.50mm pitch FFC, Type D, 76.00mm, 12 circuits |
 | CPG151101S11-2 | 12 | SW1-12 | Kailh®︎ hot swap socket (White) |
 ||
+| Octave Enclosure Case rev.1.0.0 | 1 | n/a | JLCPCB, 3D printing (MJF), PA12-HP Nylon |
+| Octave Enclosure Top Frame rev.1.0.0 | 1 | n/a | JLCPCB, 3D printing (MJF), PA12-HP Nylon |
+| PORON | 4 | n/a | 78mm x 2.5mm (t=1.5mm) |
+| PORON | 4 | n/a | 59mm x 2.5mm (t=1.5mm) |
+| Screw M2 5mm | 1 | n/a | Hirosugi B-0205 |
+| Nut M2 | 1 | n/a | Hirosugi BNT-02-2 |
+| Washer M2 | 1 | n/a | Hirosugi BW-0243-03 |
+||
 | 30pF 0402 | 2 | C15, C16 | PCBA | C1570 |
 | 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
 | 1uF 0402 | 2 | C3, C4 | PCBA | C52923 |

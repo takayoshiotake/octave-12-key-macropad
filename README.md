@@ -7,6 +7,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 <img src="prototype-3/IMG_4921.jpg" width="160"/>
 <img src="prototype-3/IMG_4947.jpg" width="160"/>
+<img src="prototype-3/IMG_4948.jpg" width="160"/>
 
 - [ ] prototype-3: Simple design
   - [ ] Enclosure
@@ -110,6 +111,8 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 | PORON | 4 | n/a | 78mm x 2.5mm (t=1.5mm) |
 | PORON | 4 | n/a | 59mm x 2.5mm (t=1.5mm) |
 | Screw M2 5mm | 1 | n/a | Hirosugi B-0205 |
+| Screw M2 8mm | 4 | n/a | Hirosugi B-0208 |
+| Insert nut M2 | 4 | n/a | Hirosugi HSB-203030Z |
 | Nut M2 | 1 | n/a | Hirosugi BNT-02-2 |
 | Washer M2 | 1 | n/a | Hirosugi BW-0243-03 |
 ||

@@ -101,7 +101,7 @@ You can fetch the CircuitPython source code for the Octave from the following Gi
 |-|-:|-|-|-|
 | Octave Input PCB rev.6.1.3 | 1 | n/a | JLCPCB |
 | Octave Plate rev.1.0.3 | 1 | n/a | JLCPCB, Alminium PCB (t=1.6mm) |
-| 0151660122 | 1 | n/a | Molex 0.50mm pitch FFC, Type D, 76.00mm, 12 circuits |
+| 0151660120 | 1 | n/a | Molex 0.50mm pitch FFC, Type D, 50.80mm, 12 circuits |
 | CPG151101S11-2 | 12 | SW1-12 | Kailh®︎ hot swap socket (White) |
 ||
 | Octave Enclosure Case rev.1.0.0 | 1 | n/a | JLCPCB, 3D printing (MJF), PA12-HP Nylon |
@@ -145,7 +145,7 @@ MEMO: *[1]* To reduce costs, I did not assemble LED1 with PCBA.
 
 - Assembly
 
-    <img src="prototype-3/IMG_4921.jpg" width="160"/>
+    <img src="prototype-3/IMG_4962.jpg" width="160"/>
     <img src="prototype-3/IMG_4947.jpg" width="160"/>
     <img src="prototype-3/IMG_4948.jpg" width="160"/>
 

@@ -20,6 +20,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 ## Specifications
 
 - USB-C (USB2.0, HID)
+  - 🔗 <https://pid.codes/1209/8CAE/>
 - Hot-swap sockets for MX compatible switches
 - Programmable firmware (CircuitPython)
 - No LEDs

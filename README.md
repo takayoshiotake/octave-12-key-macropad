@@ -67,18 +67,21 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 ## CircuitPython
 
 Software for the Octave (prototype-2, prototype-3) runs on CircuitPython.
-You can fetch the CircuitPython source code for the Octave from the following GitHub repo.
-
-**Stable:**
-
-- 🔗 [takayoshiotake/circuitpython:7.3.x-board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/7.3.x-board-octave-rp2040)
-  - <https://github.com/takayoshiotake/circuitpython/tree/c3b4d05dc04d74c6229506215eae799fb23f37ce/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
 
 **Latest:**
 
 - 🔗 [adafruit/circuitpython](https://github.com/adafruit/circuitpython)
-  - <https://github.com/adafruit/circuitpython/tree/main/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
+  - 🔗 <https://github.com/adafruit/circuitpython/tree/main/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
 - 🔗 [Built UF2](https://adafruit-circuit-python.s3.amazonaws.com/index.html?prefix=bin/takayoshiotake_octave_rp2040/)
+
+**Older:**
+
+- 🔗 [takayoshiotake/circuitpython:7.3.x-board-octave-rp2040](https://github.com/takayoshiotake/circuitpython/tree/7.3.x-board-octave-rp2040)
+  - 🔗 <https://github.com/takayoshiotake/circuitpython/tree/c3b4d05dc04d74c6229506215eae799fb23f37ce/ports/raspberrypi/boards/takayoshiotake_octave_rp2040>
+
+- How to build:
+  - 🔗 <https://learn.adafruit.com/building-circuitpython/build-circuitpython>
+  - 🔗 <https://github.com/takayoshiotake/circuitpython/blob/c3b4d05dc04d74c6229506215eae799fb23f37ce/BUILDING.md>
 
 ## Plate
 

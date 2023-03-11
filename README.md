@@ -29,7 +29,7 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Layout
 
-📄 [layout/keyboard-layout.png](layout/keyboard-layout.png) (rev.4)
+📄 [layout/keyboard-layout.png](layout/keyboard-layout.png) (rev.5)
 
 ![keyboard layout](layout/keyboard-layout.png)
 
@@ -41,8 +41,8 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ```json
 [{f:3},"F1\nF9","F2\nF10","F3\nF11","F4\nF12"],
-["F5","F6","F7","F8"],
-["Esc","Vol-","Vol+","MO(1)"]
+["F5\nVol-","F6\nVol+","F7\nRW","F8\nFF"],
+["Shift","Ctrl","Esc","MO(1)"]
 ```
 
 - 🔗 [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/)

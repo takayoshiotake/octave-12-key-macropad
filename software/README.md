@@ -7,7 +7,6 @@
     2. Reboot Octave by holding down BOOT and pressing RESET
     3. Copy (drag & drop) uf2 to RPI-RP2
         - 📄 [adafruit-circuitpython-takayoshiotake_octave_rp2040-en_US-8.0.3.uf2](../circuitpython-bin/adafruit-circuitpython-takayoshiotake_octave_rp2040-en_US-8.0.3.uf2)
-        - 
 
 2. Renaming CIRCUITPY to OCTAVE_CP
 

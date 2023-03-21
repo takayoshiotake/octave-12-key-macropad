@@ -7,6 +7,8 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 <img src="prototype-3/IMG_4951.jpg" height="160"/> <img src="prototype-3/IMG_4952.jpg" height="160"/>
 
+- [ ] prototype-3.1: Upgrade with LEDs under keys
+  - [x] PCB design
 - [x] prototype-3: Simple design
   - [x] Enclosure: OK!
   - [x] Test: OK!
@@ -23,9 +25,6 @@ It is primarily designed to be a compact keyboard with support for 12 function k
   - 🔗 <https://pid.codes/1209/8CAE/>
 - Hot-swap sockets for MX compatible switches
 - Programmable firmware (CircuitPython)
-- No LEDs
-- No keycaps
-- No switches
 
 ## Layout
 
@@ -64,6 +63,14 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 ![pcb 3d png](electronics/Octave_Input_PCB_3D.png)
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
+
+### Upgrade with LEDs under keys
+
+📄 [electronics/Octave_Input_LED_PCB_3D.png](electronics/Octave_Input_LED_PCB_3D.png) (rev.1.0.0)
+
+![led pcb 3d png](electronics/Octave_Input_LED_PCB_3D.png)
+
+📄 [electronics/Octave_Input_LED_PCB/Octave_Input_LED_PCB.kicad_pcb](electronics/Octave_Input_LED_PCB/Octave_Input_LED_PCB.kicad_pcb)
 
 ## CircuitPython
 

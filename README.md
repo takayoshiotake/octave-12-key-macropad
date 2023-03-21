@@ -56,7 +56,7 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_sch)
 
-### Upgrade with LEDs under keys
+### Upgrade schematic with LEDs under keys
 
 📄 [electronics/Octave_Input_LED_PCB.svg](electronics/Octave_Input_LED_PCB.svg) (rev.1.0.0)
 
@@ -72,7 +72,7 @@ I have also designed a custom MCU circuit from prototype-2, the MCU is RP2040 an
 
 📄 [electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb](electronics/Octave_Input_PCB/Octave_Input_PCB.kicad_pcb)
 
-### Upgrade with LEDs under keys
+### Upgrade PCB with LEDs under keys
 
 📄 [electronics/Octave_Input_LED_PCB_3D.png](electronics/Octave_Input_LED_PCB_3D.png) (rev.1.0.0)
 

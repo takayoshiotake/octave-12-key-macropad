@@ -5,10 +5,11 @@ It is primarily designed to be a compact keyboard with support for 12 function k
 
 ## Status
 
-<img src="prototype-3/IMG_4951.jpg" height="160"/> <img src="prototype-3/IMG_4952.jpg" height="160"/>
+<img src="prototype-3/IMG_4951.jpg" height="160"/> <img src="prototype-3/IMG_4952.jpg" height="160"/> <img src="prototype-3/IMG_5009.jpg" height="160"/>
 
 - [ ] prototype-3.1: Upgrade with LEDs under keys
-  - [x] PCB design
+  - [ ] LED Animation
+  - [x] PCB: OK!
 - [x] prototype-3: Simple design
   - [x] Enclosure: OK!
   - [x] Test: OK!
@@ -118,10 +119,11 @@ Software for the Octave (prototype-2, prototype-3) runs on CircuitPython.
 
 | Material | Unit | Designator | Note | JLCPCB Part # |
 |-|-:|-|-|-|
-| Octave Input PCB rev.6.1.3 | 1 | n/a | JLCPCB |
+| Octave CPU PCB rev.6.1.3 | 1 | n/a | JLCPCB |
+| Octave Input PCB rev.6.1.3 *[2]* | 1 | n/a | JLCPCB |
 | Octave Plate rev.1.0.3 | 1 | n/a | JLCPCB, Alminium PCB (t=1.6mm) |
 | 0151660120 | 1 | n/a | Molex 0.50mm pitch FFC, Type D, 50.80mm, 12 circuits |
-| CPG151101S11-2 | 12 | SW1-12 | Kailh®︎ hot swap socket (White) |
+| CPG151101S11-2 | 12 | SW1-12 *[2]* | Kailh®︎ hot swap socket (White) |
 ||
 | Octave Enclosure Case rev.1.0.0 | 1 | n/a | JLCPCB, 3D printing (MJF), PA12-HP Nylon |
 | Octave Enclosure Top Frame rev.1.0.0 | 1 | n/a | JLCPCB, 3D printing (MJF), PA12-HP Nylon |
@@ -137,9 +139,9 @@ Software for the Octave (prototype-2, prototype-3) runs on CircuitPython.
 | 100nF 0402 | 10 | C5-14 | PCBA | C307331 |
 | 1uF 0402 | 2 | C3, C4 | PCBA | C52923 |
 | 10uF 0402 | 2 | C1, C2 | PCBA | C15525 |
-| 1N4148WS | 12 | D1-12 | PCBA | C2128 |
+| 1N4148WS | 12 | D1-12 *[2]* | PCBA | C2128 |
 | HRO_TYPE-C-31-M-12 | 1 | J1 | PCBA, USB Connector (Type-C) | C165948 |
-| JUSHUO_AFC01-S12FCC-00 | 2 | J2, J3 | PCBA, FFC Connector (0.50mm pitch, 12 circuits) | C262268 |
+| JUSHUO_AFC01-S12FCC-00 | 2 | J2, J3 *[2]* | PCBA, FFC Connector (0.50mm pitch, 12 circuits) | C262268 |
 | 27Ω 0402 | 2 | R3, R4 | PCBA | C352446 |
 | 1KΩ 0402 | 2 | R7, R8 | PCBA | C11702 |
 | 5.1KΩ 0402 | 2 | R1, R2 | PCBA | C25905 |
@@ -153,10 +155,27 @@ Software for the Octave (prototype-2, prototype-3) runs on CircuitPython.
 | WS2812C-2020-V1 | 1 | LED1 *[1]* | PCBA, NeoPixel | C2976072 |
 
 MEMO: *[1]* To reduce costs, I did not assemble LED1 with PCBA.
+MEMO: *[2]* Can be replaced with upgrade parts.
 
-- Octave Input PCB rev.6.1.3 (PCBA)
+Upgrade parts:
+
+| Material | Unit | Designator | Note | JLCPCB Part # |
+|-|-:|-|-|-|
+| Octave Input LED PCB rev.1.0.0 | 1 | n/a | JLCPCB |
+| CPG151101S11-2 | 12 | SW1-12 | Kailh®︎ hot swap socket (White) |
+||
+| 1N4148WS | 12 | D1-12 | PCBA | C2128 |
+| JUSHUO_AFC01-S12FCC-00 | 1 | J3 | PCBA, FFC Connector (0.50mm pitch, 12 circuits) | C262268 |
+||
+| WS2812B-Mini-V3 | 12 | LED201-0212 | NeoPixel |
+
+- Octave CPU PCB rev.6.1.3, Octave Input PCB rev.6.1.3 (PCBA)
 
     <img src="prototype-3/IMG_4905.jpg" height="160"/> <img src="prototype-3/IMG_4906.jpg" height="160"/>
+
+- Octave Input LED PCB rev.1.0.0 (Upgrade)
+
+    <img src="prototype-3/IMG_5008.jpg" height="160"/>
 
 - Octave Plate rev.1.0.3
 
@@ -170,7 +189,7 @@ MEMO: *[1]* To reduce costs, I did not assemble LED1 with PCBA.
 
 ### Software
 
-- [[WIP] Software](software/README.md)
+- [Software](software/README.md)
 
 ### History
 

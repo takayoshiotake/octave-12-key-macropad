@@ -77,10 +77,13 @@ KEY_MAP_LAYERS = [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F10),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F11),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F12),
-        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.VOLUME_DECREMENT),
-        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.VOLUME_INCREMENT),
+        KeyAssignment(CodeType.CONSUMER_CONTROL,
+                      ConsumerControlCode.VOLUME_DECREMENT),
+        KeyAssignment(CodeType.CONSUMER_CONTROL,
+                      ConsumerControlCode.VOLUME_INCREMENT),
         KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.REWIND),
-        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.FAST_FORWARD),
+        KeyAssignment(CodeType.CONSUMER_CONTROL,
+                      ConsumerControlCode.FAST_FORWARD),
         KeyAssignment(CodeType.KEYBOARD, Keycode.SHIFT),
         KeyAssignment(CodeType.KEYBOARD, Keycode.CONTROL),
         KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
@@ -122,6 +125,10 @@ pixpower.switch_to_output(True, digitalio.DriveMode.PUSH_PULL)
 pixels = NeoPixel(board.NEOPIX, 1, auto_write=True)
 pixels[0] = (0, 0, 2)
 
+pixels_under_keys = NeoPixel(board.GPIO20, 12, auto_write=True)
+for i in range(12):
+  # pixels_under_keys[i] = (255 / 8, 255 / 8, 255 / 8)
+  pixels_under_keys[i] = (0, 0, 0)
 
 key_matrix = KeyMatrix()
 
@@ -139,7 +146,6 @@ while True:
                           for _ in range(len(key_matrix.row_ios) * len(key_matrix.col_ios))]
     pressed_keys = [None for _ in range(len(key_event_planners))]
     scan_key_matrix_timing = time.monotonic()  # For debounce
-    scan_stick_timing = time.monotonic()
     while True:
       current_time = time.monotonic()
       if current_time >= scan_key_matrix_timing:

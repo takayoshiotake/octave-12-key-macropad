@@ -1,4 +1,5 @@
 import collections
+import math
 import time
 
 import board
@@ -13,6 +14,9 @@ from adafruit_hid.mouse import Mouse
 from neopixel import NeoPixel
 
 from octave_pcb.key_matrix import KeyMatrix
+
+SCAN_KEY_MATRIX_INTERVAL = 0.01
+LED_INTERVAL = 0.05
 
 
 class KeyEvent:
@@ -124,11 +128,8 @@ pixpower = digitalio.DigitalInOut(board.NEOPIX_POWER)
 pixpower.switch_to_output(True, digitalio.DriveMode.PUSH_PULL)
 pixels = NeoPixel(board.NEOPIX, 1, auto_write=True)
 pixels[0] = (0, 0, 2)
-
-pixels_under_keys = NeoPixel(board.GPIO20, 12, auto_write=True)
-for i in range(12):
-  # pixels_under_keys[i] = (255 / 8, 255 / 8, 255 / 8)
-  pixels_under_keys[i] = (0, 0, 0)
+pixels_under_keys = NeoPixel(board.GPIO20, 12, auto_write=False)
+pixels_under_keys.show()
 
 key_matrix = KeyMatrix()
 
@@ -146,6 +147,7 @@ while True:
                           for _ in range(len(key_matrix.row_ios) * len(key_matrix.col_ios))]
     pressed_keys = [None for _ in range(len(key_event_planners))]
     scan_key_matrix_timing = time.monotonic()  # For debounce
+    led_timing = time.monotonic()  # For debounce
     while True:
       current_time = time.monotonic()
       if current_time >= scan_key_matrix_timing:
@@ -204,9 +206,29 @@ while True:
             elif key_assignment.type == CodeType.CONSUMER_CONTROL:
               consumer_control.release()
 
-        scan_key_matrix_timing += 0.01
+        scan_key_matrix_timing += SCAN_KEY_MATRIX_INTERVAL
         if scan_key_matrix_timing <= current_time:
-          scan_key_matrix_timing = current_time + 0.01
+          scan_key_matrix_timing = current_time + SCAN_KEY_MATRIX_INTERVAL
+
+      if current_time >= led_timing:
+
+        for i in range(len(pixels_under_keys)):
+          if are_keys_pressed[i]:
+            pixels_under_keys[i] = (
+                128 if i < 4 else 0,
+                128 if 4 <= i < 8 else 0,
+                128 if 8 <= i else 0)
+          elif pixels_under_keys[i] != (0, 0, 0):
+            pixels_under_keys[i] = (
+                math.floor(pixels_under_keys[i][0] * 0.8),
+                math.floor(pixels_under_keys[i][1] * 0.8),
+                math.floor(pixels_under_keys[i][2] * 0.8))
+
+        pixels_under_keys.show()
+
+        led_timing += LED_INTERVAL
+        if led_timing <= current_time:
+          led_timing = current_time + LED_INTERVAL
 
   except Exception:
     pixels[0] = (0, 0, 2)

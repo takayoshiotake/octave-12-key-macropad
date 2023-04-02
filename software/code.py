@@ -214,10 +214,20 @@ while True:
 
         for i in range(len(pixels_under_keys)):
           if are_keys_pressed[i]:
-            pixels_under_keys[i] = (
-                128 if i < 4 else 0,
-                128 if 4 <= i < 8 else 0,
-                128 if 8 <= i else 0)
+            pixels_under_keys[i] = [
+                (255, 0, 0),
+                (255, 128, 0),
+                (255, 255, 0),
+                (128, 255, 0),
+                (0, 255, 0),
+                (0, 255, 128),
+                (0, 255, 255),
+                (0, 128, 255),
+                (0, 0, 255),
+                (128, 0, 255),
+                (255, 0, 255),
+                (255, 0, 128),
+            ][i]
           elif pixels_under_keys[i] != (0, 0, 0):
             pixels_under_keys[i] = (
                 math.floor(pixels_under_keys[i][0] * 0.8),

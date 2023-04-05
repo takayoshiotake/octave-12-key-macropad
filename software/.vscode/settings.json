@@ -10,6 +10,7 @@
   "python.formatting.provider": "autopep8",
   "python.formatting.autopep8Args": [
     "--indent-size=2",
+    "--max-line-length=120"
   ],
   "python.sortImports.path": "${workspaceFolder}/.venv/bin/isort",
   "python.languageServer": "Pylance",

@@ -1,5 +1,6 @@
 import collections
 import math
+import random
 import time
 
 import board
@@ -60,7 +61,6 @@ class CodeType:
 
 KeyAssignment = collections.namedtuple('KeyAssignment', ['type', 'code'])
 
-KEYCODE_MO = 'MO'
 KEY_MAP_LAYERS = [
     [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F1),
@@ -81,13 +81,10 @@ KEY_MAP_LAYERS = [
         KeyAssignment(CodeType.KEYBOARD, Keycode.F10),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F11),
         KeyAssignment(CodeType.KEYBOARD, Keycode.F12),
-        KeyAssignment(CodeType.CONSUMER_CONTROL,
-                      ConsumerControlCode.VOLUME_DECREMENT),
-        KeyAssignment(CodeType.CONSUMER_CONTROL,
-                      ConsumerControlCode.VOLUME_INCREMENT),
+        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.VOLUME_DECREMENT),
+        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.VOLUME_INCREMENT),
         KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.REWIND),
-        KeyAssignment(CodeType.CONSUMER_CONTROL,
-                      ConsumerControlCode.FAST_FORWARD),
+        KeyAssignment(CodeType.CONSUMER_CONTROL, ConsumerControlCode.FAST_FORWARD),
         KeyAssignment(CodeType.KEYBOARD, Keycode.SHIFT),
         KeyAssignment(CodeType.KEYBOARD, Keycode.CONTROL),
         KeyAssignment(CodeType.KEYBOARD, Keycode.ESCAPE),
@@ -124,122 +121,147 @@ KEY_MAP_LAYERS = [
     # ],
 ]
 
-pixpower = digitalio.DigitalInOut(board.NEOPIX_POWER)
-pixpower.switch_to_output(True, digitalio.DriveMode.PUSH_PULL)
-pixels = NeoPixel(board.NEOPIX, 1, auto_write=True)
-pixels[0] = (0, 0, 2)
-pixels_under_keys = NeoPixel(board.GPIO20, 12, auto_write=False)
-pixels_under_keys.show()
 
-key_matrix = KeyMatrix()
+def update_pixels_according_to_key_presses(pixels, are_keys_pressed):
+  for i in range(len(pixels_under_keys)):
+    if are_keys_pressed[i]:
+      pixels[i] = [
+          (255, 0, 0),
+          (255, 128, 0),
+          (255, 255, 0),
+          (128, 255, 0),
+          (0, 255, 0),
+          (0, 255, 128),
+          (0, 255, 255),
+          (0, 128, 255),
+          (0, 0, 255),
+          (128, 0, 255),
+          (255, 0, 255),
+          (255, 0, 128),
+      ][i]
+    elif pixels[i] != (0, 0, 0):
+      pixels[i] = (
+          math.floor(pixels[i][0] * 0.8),
+          math.floor(pixels[i][1] * 0.8),
+          math.floor(pixels[i][2] * 0.8))
 
-time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
-while True:
-  try:
-    consumer_control = ConsumerControl(usb_hid.devices)
-    keyboard = Keyboard(usb_hid.devices)
-    keyboard_layout = KeyboardLayoutUS(keyboard)
-    mouse = Mouse(usb_hid.devices)
-    pixels[0] = (0, 2, 2)
 
-    key_map_layer = 0
-    key_event_planners = [KeyEventPlanner()
-                          for _ in range(len(key_matrix.row_ios) * len(key_matrix.col_ios))]
-    pressed_keys = [None for _ in range(len(key_event_planners))]
-    scan_key_matrix_timing = time.monotonic()  # For debounce
-    led_timing = time.monotonic()  # For debounce
-    while True:
-      current_time = time.monotonic()
-      if current_time >= scan_key_matrix_timing:
-        are_keys_pressed = key_matrix.scan_matrix()
-        for i, key_event_planner in enumerate(key_event_planners):
-          key_event = key_event_planner.make_event(
-              current_time, are_keys_pressed[i])
-          if key_event == KeyEvent.PRESS:
-            print(f"""pressed : {i}""")
-            pressed_keys[i] = KEY_MAP_LAYERS[key_map_layer][i]
-            key_assignment = pressed_keys[i]
-            if key_assignment is None:
-              pass
-            elif key_assignment.type == CodeType.LAYER_MOMENTRY:
-              key_map_layer = 1
-            elif key_assignment.type == CodeType.LAYER_ALTERNATE:
-              # xxx
-              KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[1] = KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[0]
-            elif key_assignment.type == CodeType.LAYER_SWITCH:
-              # xxx
-              KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[2] = KEY_MAP_LAYERS[2], KEY_MAP_LAYERS[0]
-              KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[3] = KEY_MAP_LAYERS[3], KEY_MAP_LAYERS[1]
-            elif key_assignment.type == CodeType.KEYBOARD:
-              keyboard.press(key_assignment.code)
-            elif key_assignment.type == CodeType.MOUSE_MOVE:
-              mouse.move(**key_assignment.code)
-            elif key_assignment.type == CodeType.MOUSE_BUTTON:
-              mouse.press(key_assignment.code)
-            elif key_assignment.type == CodeType.CONSUMER_CONTROL:
-              consumer_control.press(key_assignment.code)
-          elif key_event == KeyEvent.LONG_PRESS:
-            # print(f"""pressed : {i}""")
-            key_assignment = pressed_keys[i]
-            if key_assignment is None:
-              pass
-            elif key_assignment.type == CodeType.LAYER_MOMENTRY:
-              pass
-            elif key_assignment.type == CodeType.KEYBOARD:
+if __name__ == '__main__':
+  key_matrix = KeyMatrix()
+  pixpower = digitalio.DigitalInOut(board.NEOPIX_POWER)
+  pixpower.switch_to_output(True, digitalio.DriveMode.PUSH_PULL)
+  pixels = NeoPixel(board.NEOPIX, 1, auto_write=True)
+  pixels[0] = (0, 0, 2)
+  pixels_under_keys = NeoPixel(board.GPIO20, 12, auto_write=False)
+  pixels_under_keys.show()
+  pixels_current = [[0.0, 0.0, 0.0] for _ in range(12)]
+  pixels_target = [[0.0, 0.0, 0.0] for _ in range(12)]
+  pixels_frame_count = 0
+  pixels_pattern = 0
+
+  # Sleep for a bit to avoid a race condition on some systems
+  time.sleep(1)
+
+  while True:
+    try:
+      consumer_control = ConsumerControl(usb_hid.devices)
+      keyboard = Keyboard(usb_hid.devices)
+      keyboard_layout = KeyboardLayoutUS(keyboard)
+      mouse = Mouse(usb_hid.devices)
+      pixels[0] = (0, 2, 2)
+
+      key_map_layer = 0
+      key_event_planners = [KeyEventPlanner() for _ in range(len(key_matrix.row_ios) * len(key_matrix.col_ios))]
+      pressed_keys = [None for _ in range(len(key_event_planners))]
+      scan_key_matrix_timing = time.monotonic()  # For debounce
+      led_timing = time.monotonic()  # For debounce
+      while True:
+        current_time = time.monotonic()
+
+        if current_time >= scan_key_matrix_timing:
+          are_keys_pressed = key_matrix.scan_matrix()
+          for i, key_event_planner in enumerate(key_event_planners):
+            key_event = key_event_planner.make_event(
+                current_time, are_keys_pressed[i])
+            if key_event == KeyEvent.PRESS:
               print(f"""pressed : {i}""")
-              keyboard.press(key_assignment.code)
-            elif key_assignment.type == CodeType.MOUSE_MOVE:
-              print(f"""pressed : {i}""")
-              mouse.move(**key_assignment.code)
-          elif key_event == KeyEvent.RELEASE:
-            print(f"""released: {i}""")
-            key_assignment = pressed_keys[i]
-            pressed_keys[i] = None
-            if key_assignment is None:
-              pass
-            elif key_assignment.type == CodeType.LAYER_MOMENTRY:
-              key_map_layer = 0
-            elif key_assignment.type == CodeType.KEYBOARD:
-              keyboard.release(key_assignment.code)
-            elif key_assignment.type == CodeType.MOUSE_BUTTON:
-              mouse.release(key_assignment.code)
-            elif key_assignment.type == CodeType.CONSUMER_CONTROL:
-              consumer_control.release()
+              pressed_keys[i] = KEY_MAP_LAYERS[key_map_layer][i]
+              key_assignment = pressed_keys[i]
+              if key_assignment is None:
+                pass
+              elif key_assignment.type == CodeType.LAYER_MOMENTRY:
+                key_map_layer = 1
+              elif key_assignment.type == CodeType.LAYER_ALTERNATE:
+                # xxx
+                KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[1] = KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[0]
+              elif key_assignment.type == CodeType.LAYER_SWITCH:
+                # xxx
+                KEY_MAP_LAYERS[0], KEY_MAP_LAYERS[2] = KEY_MAP_LAYERS[2], KEY_MAP_LAYERS[0]
+                KEY_MAP_LAYERS[1], KEY_MAP_LAYERS[3] = KEY_MAP_LAYERS[3], KEY_MAP_LAYERS[1]
+              elif key_assignment.type == CodeType.KEYBOARD:
+                keyboard.press(key_assignment.code)
+              elif key_assignment.type == CodeType.MOUSE_MOVE:
+                mouse.move(**key_assignment.code)
+              elif key_assignment.type == CodeType.MOUSE_BUTTON:
+                mouse.press(key_assignment.code)
+              elif key_assignment.type == CodeType.CONSUMER_CONTROL:
+                consumer_control.press(key_assignment.code)
+            elif key_event == KeyEvent.LONG_PRESS:
+              # print(f"""pressed : {i}""")
+              key_assignment = pressed_keys[i]
+              if key_assignment is None:
+                pass
+              elif key_assignment.type == CodeType.LAYER_MOMENTRY:
+                pass
+              elif key_assignment.type == CodeType.KEYBOARD:
+                print(f"""pressed : {i}""")
+                keyboard.press(key_assignment.code)
+              elif key_assignment.type == CodeType.MOUSE_MOVE:
+                print(f"""pressed : {i}""")
+                mouse.move(**key_assignment.code)
+            elif key_event == KeyEvent.RELEASE:
+              print(f"""released: {i}""")
+              key_assignment = pressed_keys[i]
+              pressed_keys[i] = None
+              if key_assignment is None:
+                pass
+              elif key_assignment.type == CodeType.LAYER_MOMENTRY:
+                key_map_layer = 0
+              elif key_assignment.type == CodeType.KEYBOARD:
+                keyboard.release(key_assignment.code)
+              elif key_assignment.type == CodeType.MOUSE_BUTTON:
+                mouse.release(key_assignment.code)
+              elif key_assignment.type == CodeType.CONSUMER_CONTROL:
+                consumer_control.release()
+          scan_key_matrix_timing += SCAN_KEY_MATRIX_INTERVAL
+          if scan_key_matrix_timing <= current_time:
+            scan_key_matrix_timing = current_time + SCAN_KEY_MATRIX_INTERVAL
 
-        scan_key_matrix_timing += SCAN_KEY_MATRIX_INTERVAL
-        if scan_key_matrix_timing <= current_time:
-          scan_key_matrix_timing = current_time + SCAN_KEY_MATRIX_INTERVAL
+        if current_time >= led_timing:
+          if pixels_pattern == 0:
+            update_pixels_according_to_key_presses(pixels_under_keys, are_keys_pressed)
+          else:
+            for i in range(len(pixels_under_keys)):
+              if pixels_frame_count % 60 == 0:
+                pixels_target[i][random.randint(0, 2)] = 0.5
+                pixels_target[i][random.randint(0, 2)] = 0
+                pixels_target[i][random.randint(0, 2)] = 0
+                pixels_target[i][random.randint(0, 2)] = 1
+              pixels_current[i][0] = pixels_current[i][0] * 0.9 + pixels_target[i][0] * 0.1
+              pixels_current[i][1] = pixels_current[i][1] * 0.9 + pixels_target[i][1] * 0.1
+              pixels_current[i][2] = pixels_current[i][2] * 0.9 + pixels_target[i][2] * 0.1
+              pixels_under_keys[i] = (
+                  math.floor(pixels_current[i][0] * 32),
+                  math.floor(pixels_current[i][1] * 32),
+                  math.floor(pixels_current[i][2] * 32))
+            pixels_frame_count += 1
+            pixels_frame_count = pixels_frame_count % 60
 
-      if current_time >= led_timing:
+          pixels_under_keys.show()
+          led_timing += LED_INTERVAL
+          if led_timing <= current_time:
+            led_timing = current_time + LED_INTERVAL
 
-        for i in range(len(pixels_under_keys)):
-          if are_keys_pressed[i]:
-            pixels_under_keys[i] = [
-                (255, 0, 0),
-                (255, 128, 0),
-                (255, 255, 0),
-                (128, 255, 0),
-                (0, 255, 0),
-                (0, 255, 128),
-                (0, 255, 255),
-                (0, 128, 255),
-                (0, 0, 255),
-                (128, 0, 255),
-                (255, 0, 255),
-                (255, 0, 128),
-            ][i]
-          elif pixels_under_keys[i] != (0, 0, 0):
-            pixels_under_keys[i] = (
-                math.floor(pixels_under_keys[i][0] * 0.8),
-                math.floor(pixels_under_keys[i][1] * 0.8),
-                math.floor(pixels_under_keys[i][2] * 0.8))
-
-        pixels_under_keys.show()
-
-        led_timing += LED_INTERVAL
-        if led_timing <= current_time:
-          led_timing = current_time + LED_INTERVAL
-
-  except Exception:
-    pixels[0] = (0, 0, 2)
-    time.sleep(3)
+    except Exception:
+      pixels[0] = (0, 0, 2)
+      time.sleep(3)

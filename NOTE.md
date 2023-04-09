@@ -79,3 +79,4 @@
   - ATMEGA32U4-MU: <https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=ATMEGA32U4-MU>
   - AFC01-S08FCC-00: <https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=AFC01-S08FCC-00>
   - AFC01-S12FCC-00: <https://jlcpcb.com/parts/componentSearch?isSearch=true&searchTxt=AFC01-S12FCC-00>
+  - <https://support.jlcpcb.com/article/194-how-to-generate-gerber-and-drill-files-in-kicad-6>
